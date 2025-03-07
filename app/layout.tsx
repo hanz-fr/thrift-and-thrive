@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 
 // import components
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,10 +28,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Providers>
+
+          {/* navbar */}
           <Navbar />
+
           {children}
 
         </Providers>
+
+        {/* footer */}
+        <Footer />
       </body>
     </html>
   );
