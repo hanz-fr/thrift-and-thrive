@@ -25,3 +25,12 @@ body {
   background-color: #ffffff;
   font-family: var(--font-poppins), sans-serif;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Untuk browser berbasis WebKit (Chrome, Safari) */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
+  scrollbar-width: none; /* Untuk Firefox */
+}
