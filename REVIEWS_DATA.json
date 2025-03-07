@@ -1,0 +1,26 @@
+[
+  {
+    "username": "Mahesa",
+    "image": "https://placehold.co/300x300",
+    "review": "web nya bagus, banyak pilihan barangnya, aku suka belanja di thrift and thrive 😜👍",
+    "rating": 5
+  },
+  {
+    "username": "Hilmi",
+    "image": "https://placehold.co/300x300",
+    "review": "produk menarik, banyak yang rare disini dengan harga terjangkau. sekaligus menghargai lingkungan. overall oke 👍",
+    "rating": 5
+  },
+  {
+    "username": "Ilyasa",
+    "image": "https://placehold.co/300x300",
+    "review": "bajunya bagus bagus, pelayanan juga nyaman dan aman. recommended ❤",
+    "rating": 4
+  },
+  {
+    "username": "Sandy",
+    "image": "https://placehold.co/300x300",
+    "review": "murah tapi berkualitas, mantap",
+    "rating": 4
+  }
+]

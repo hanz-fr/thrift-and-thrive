@@ -25,3 +25,7 @@ body {
   background-color: #ffffff;
   font-family: var(--font-poppins), sans-serif;
 }
+
+.profile-box-shadow {
+  box-shadow: -5px 5px 0px black;
+}
