@@ -29,15 +29,17 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Providers>
 
-          {/* navbar */}
-          <Navbar />
+          <div className="max-w-7xl mx-auto">
+            {/* navbar */}
+            <Navbar />
 
-          {children}
+            {children}
 
+            {/* footer */}
+            <Footer />
+          </div>
         </Providers>
 
-        {/* footer */}
-        <Footer />
       </body>
     </html>
   );
