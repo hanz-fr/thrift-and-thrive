@@ -3,7 +3,7 @@ import { Button } from '@heroui/react';
 
 export default function HeroSection() {
     return (
-        <section className='relative w-full min-h-[84vh] flex justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden'>
+        <section className='relative w-full min-h-[90vh] flex justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden'>
             <div className="absolute top-12 left-36 w-32 h-40 bg-gray-300 rounded-lg opacity-50 hidden sm:block"></div>
             <div className="absolute top-10 right-36 w-44 h-64 bg-gray-300 rounded-lg opacity-50 hidden sm:block"></div>
             <div className="absolute top-80 left-72 w-40 h-60 bg-gray-300 rounded-lg opacity-50 hidden sm:block"></div>

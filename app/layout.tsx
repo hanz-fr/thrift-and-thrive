@@ -38,6 +38,7 @@ export default function RootLayout({
             {/* footer */}
             <Footer />
           </div>
+
         </Providers>
 
       </body>

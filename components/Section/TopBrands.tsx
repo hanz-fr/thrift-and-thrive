@@ -13,7 +13,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 export default function TopBrands() {
     return (
-        <div className="h-96 bg-gray-200 flex flex-col justify-center items-center p-6">
+        <div className="h-96 bg-gray-200 flex flex-col justify-center items-center p-6 my-12">
             <h2 className="text-3xl font-bold text-center mb-12">Brands</h2>
 
             <div className="w-full max-w-7xl">
