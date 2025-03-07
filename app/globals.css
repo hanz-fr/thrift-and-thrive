@@ -26,6 +26,7 @@ body {
   font-family: var(--font-poppins), sans-serif;
 }
 
+
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Untuk browser berbasis WebKit (Chrome, Safari) */
 }
@@ -33,4 +34,8 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
   scrollbar-width: none; /* Untuk Firefox */
+}
+
+.profile-box-shadow {
+  box-shadow: -5px 5px 0px black;
 }
