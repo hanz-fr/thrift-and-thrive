@@ -19,7 +19,7 @@ import styles from "./styles.module.css";
 import reviews from "@/REVIEWS_DATA.json";
 
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import ReviewStar from "./ReviewStar";
 
 export default function ReviewCarousel() {
@@ -40,12 +40,15 @@ export default function ReviewCarousel() {
           <IoMdArrowBack />
         </Button>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          slidesPerView={2}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+          }}
+          loop={true}
           onInit={(swiper) => {
             setTimeout(() => {
               if (swiper?.params?.navigation) {
@@ -62,9 +65,9 @@ export default function ReviewCarousel() {
         >
           {reviews.map((e: any) => (
             <SwiperSlide className="p-2">
-              <Card shadow="none" className="bg-[#D9D9D9]">
+              <Card shadow="none" className="bg-[#D9D9D9] h-full">
                 <CardBody>
-                  <div className="flex gap-5">
+                  <div className="flex gap-5 my-auto items-center">
                     <div className="w-fit h-fit">
                       <Image
                         className="rounded-xl profile-box-shadow"
@@ -76,10 +79,14 @@ export default function ReviewCarousel() {
                       />
                     </div>
                     <span className="flex flex-col w-64 gap-1">
-                      <p className="font-normal text-sm sm:text-[14px]">"{e.review}"</p>
+                      <p className="font-normal text-sm sm:text-[14px]">
+                        "{e.review}"
+                      </p>
                       {/* <span>{e.rating}</span> */}
                       <ReviewStar rating={e.rating} />
-                      <p className="font-medium text-xs sm:text-[14px]">{e.username}</p>
+                      <p className="font-medium text-xs sm:text-[14px]">
+                        {e.username}
+                      </p>
                     </span>
                   </div>
                 </CardBody>
