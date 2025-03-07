@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 
 import Image from "next/image";
 
@@ -33,69 +34,63 @@ export default function ReviewCarousel() {
       <div className="text-sm sm:text-[18px] text-center">
         An honest review from their perpsective
       </div>
-      <Swiper
-        modules={[Navigation]}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        onInit={(swiper) => {
-          // Fix for navigation buttons not working on first render
-          setTimeout(() => {
-            if (swiper?.params?.navigation) {
-              Object.assign(swiper.params.navigation, {
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
-              });
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }
-          });
-        }}
-        className="mySwiper"
-      >
-        {reviews.map((e: any) => (
-          <SwiperSlide className="p-2">
-            <Card>
-              <CardBody>
-                <div className="flex gap-5">
-                  <div className="w-fit h-fit">
-                    <Image
-                      className="rounded-xl profile-box-shadow"
-                      src={e.image}
-                      alt={"user"}
-                      width={100}
-                      height={100}
-                      unoptimized
-                    />
+      <div className="flex">
+        {/* Custom Navigation Buttons */}
+        <Button isIconOnly ref={prevRef} variant="faded" className="my-auto">
+          <IoMdArrowBack />
+        </Button>
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          slidesPerView={2}
+          onInit={(swiper) => {
+            setTimeout(() => {
+              if (swiper?.params?.navigation) {
+                Object.assign(swiper.params.navigation, {
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                });
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+            });
+          }}
+          className="mySwiper"
+        >
+          {reviews.map((e: any) => (
+            <SwiperSlide className="p-2">
+              <Card shadow="none" className="bg-[#D9D9D9]">
+                <CardBody>
+                  <div className="flex gap-5">
+                    <div className="w-fit h-fit">
+                      <Image
+                        className="rounded-xl profile-box-shadow"
+                        src={e.image}
+                        alt={"user"}
+                        width={100}
+                        height={100}
+                        unoptimized
+                      />
+                    </div>
+                    <span className="flex flex-col w-64 gap-1">
+                      <p className="font-normal text-sm sm:text-[14px]">"{e.review}"</p>
+                      {/* <span>{e.rating}</span> */}
+                      <ReviewStar rating={e.rating} />
+                      <p className="font-medium text-xs sm:text-[14px]">{e.username}</p>
+                    </span>
                   </div>
-                  <span className="flex flex-col w-64 gap-1">
-                    <p className="font-normal text-xs">"{e.review}"</p>
-                    {/* <span>{e.rating}</span> */}
-                    <ReviewStar rating={e.rating} />
-                    <p className="font-medium text-xs">{e.username}</p>
-                  </span>
-                </div>
-              </CardBody>
-            </Card>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      {/* Custom Navigation Buttons */}
-      <Button
-        ref={prevRef}
-        variant={"ghost"}
-        className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10"
-      >
-        ⬅
-      </Button>
-      <Button
-        ref={nextRef}
-        variant="ghost"
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10"
-      >
-        ➡
-      </Button>
+                </CardBody>
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Button isIconOnly ref={nextRef} variant="faded" className="my-auto">
+          <IoMdArrowForward />
+        </Button>
+      </div>
     </>
   );
 }

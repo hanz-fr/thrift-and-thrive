@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ReviewStar(props: { rating: number }) {
   return (
-    <div className="overflow-x-scroll rounded-lg lg:overflow-visible">
+    <div>
       <div className="flex items-center gap-2 font-bold text-blue-gray-500">
         <div className="inline-flex items-center">
           <span>
