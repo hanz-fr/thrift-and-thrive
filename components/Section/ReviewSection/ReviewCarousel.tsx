@@ -27,14 +27,14 @@ export default function ReviewCarousel() {
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
   return (
-    <>
+    <div className="mb-28">
       <div className="font-medium sm:text-[40px] text-center">
         This is what our customer says
       </div>
       <div className="text-sm sm:text-[18px] text-center">
         An honest review from their perpsective
       </div>
-      <div className="flex">
+      <div className="flex mt-5 md:mt-10">
         {/* Custom Navigation Buttons */}
         <Button isIconOnly ref={prevRef} variant="faded" className="my-auto">
           <IoMdArrowBack />
@@ -98,6 +98,6 @@ export default function ReviewCarousel() {
           <IoMdArrowForward />
         </Button>
       </div>
-    </>
+    </div>
   );
 }
