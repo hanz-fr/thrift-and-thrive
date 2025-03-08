@@ -86,7 +86,7 @@ export default function CartItems() {
                         isLoading={isLoading}
                         onClick={handleBuyNow}
                     >
-                        {isLoading ? "Processing..." : "Buy Now"}
+                        {isLoading ? "Processing..." : "Checkout"}
                     </Button>
                 </div>
             </div>

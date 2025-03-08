@@ -7,6 +7,7 @@ import React from "react";
 import Homepage from "@/components/Homepage";
 import WishlistPage from "@/components/WishlistPage";
 import CartPage from "@/components/CartPage";
+import CheckoutPage from "@/components/CheckoutPage";
 
 export default function Home() {
 
