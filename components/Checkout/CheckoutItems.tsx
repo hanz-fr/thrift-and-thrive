@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Input } from "@heroui/react";
+import CheckoutModal from '../Modal/CheckoutModal';
 
 interface CheckoutItemsProps {
     shippingMethod: string;
@@ -9,10 +10,23 @@ interface CheckoutItemsProps {
 }
 
 export default function CheckoutItems({ shippingMethod, paymentMethod }: CheckoutItemsProps) {
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const subtotal = 2000000;
     const shippingCost = shippingMethod === 'express' ? 16000 : 0;
     const estimatedTaxes = 12000;
     const total = subtotal + shippingCost + estimatedTaxes;
+
+    // handle checkout and show modal
+    const handleCheckout = () => {
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsLoading(false);
+            setIsModalOpen(true);
+        }, 2000);
+    };
 
     return (
         <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow-md">
@@ -67,9 +81,15 @@ export default function CheckoutItems({ shippingMethod, paymentMethod }: Checkou
                 </div>
             </div>
 
-            <Button className="mt-6 w-full py-3 font-semibold text-white bg-[#16423C]">
-                Continue to Payment
+            <Button
+                className="mt-6 w-full py-3 font-semibold text-white bg-[#16423C]"
+                isLoading={isLoading}
+                onClick={handleCheckout}
+            >
+                {isLoading ? "Loading..." : "Checkout and Place Order"}
             </Button>
+
+            {isModalOpen && <CheckoutModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />}
         </div>
     );
 }
