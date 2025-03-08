@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 export default function ProductDetailPage() {
   return (
-    <div className="block sm:flex max-w-7xl mx-auto my-10">
+    <div className="block sm:flex max-w-7xl mx-auto mt-10 mb-52">
       <ProductCarousel />
       <div className="my-5 sm:my-0"></div>
       <Card className="px-10 py-5">
