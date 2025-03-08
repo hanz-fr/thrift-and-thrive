@@ -1,14 +1,17 @@
-'use client'
+'use client';
 
-import React from 'react'
+import React from 'react';
 import { Button, Input } from "@heroui/react";
+import { FaCcVisa, FaCcMastercard, FaCcPaypal, FaUniversity } from 'react-icons/fa';
 
 interface CheckoutFormProps {
     shippingMethod: string;
     handleShippingChange: (method: string) => void;
+    paymentMethod: string;
+    handlePaymentChange: (method: string) => void;
 }
 
-export default function CheckoutForm({ shippingMethod, handleShippingChange }: CheckoutFormProps) {
+export default function CheckoutForm({ shippingMethod, handleShippingChange, paymentMethod, handlePaymentChange }: CheckoutFormProps) {
     return (
         <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-lg font-semibold mb-4">Shipping Address</h2>
@@ -43,6 +46,32 @@ export default function CheckoutForm({ shippingMethod, handleShippingChange }: C
                     <p className="text-sm font-bold">Rp. 16.000</p>
                 </div>
             </div>
+
+            <h2 className="text-lg font-semibold mt-6 mb-2">Payment Method</h2>
+            <div className="flex gap-4">
+                <div
+                    className={`border p-4 rounded-lg flex-1 cursor-pointer flex items-center gap-2 ${paymentMethod === 'Credit Card' ? 'border-black' : 'border-gray-300'}`}
+                    onClick={() => handlePaymentChange('Credit Card')}
+                >
+                    <FaCcVisa className="text-blue-600 text-2xl" />
+                    <FaCcMastercard className="text-red-600 text-2xl" />
+                    <p className="text-sm font-semibold">Credit Card</p>
+                </div>
+                <div
+                    className={`border p-4 rounded-lg flex-1 cursor-pointer flex items-center gap-2 ${paymentMethod === 'PayPal' ? 'border-black' : 'border-gray-300'}`}
+                    onClick={() => handlePaymentChange('PayPal')}
+                >
+                    <FaCcPaypal className="text-blue-500 text-2xl" />
+                    <p className="text-sm font-semibold">PayPal</p>
+                </div>
+                <div
+                    className={`border p-4 rounded-lg flex-1 cursor-pointer flex items-center gap-2 ${paymentMethod === 'Bank Transfer' ? 'border-black' : 'border-gray-300'}`}
+                    onClick={() => handlePaymentChange('Bank Transfer')}
+                >
+                    <FaUniversity className="text-green-600 text-2xl" />
+                    <p className="text-sm font-semibold">Bank Transfer</p>
+                </div>
+            </div>
         </div>
-    )
+    );
 }

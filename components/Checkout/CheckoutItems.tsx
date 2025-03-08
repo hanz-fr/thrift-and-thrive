@@ -5,9 +5,10 @@ import { Button, Input } from "@heroui/react";
 
 interface CheckoutItemsProps {
     shippingMethod: string;
+    paymentMethod: string;
 }
 
-export default function CheckoutItems({ shippingMethod }: CheckoutItemsProps) {
+export default function CheckoutItems({ shippingMethod, paymentMethod }: CheckoutItemsProps) {
     const subtotal = 2000000;
     const shippingCost = shippingMethod === 'express' ? 16000 : 0;
     const estimatedTaxes = 12000;
@@ -50,6 +51,10 @@ export default function CheckoutItems({ shippingMethod }: CheckoutItemsProps) {
                 <div className="flex justify-between">
                     <span className="text-sm font-semibold">Shipping</span>
                     <span className="text-sm">Rp. {shippingCost.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between">
+                    <span className="text-sm font-semibold">Payment</span>
+                    <span className="text-sm">{paymentMethod}</span>
                 </div>
                 <div className="flex justify-between">
                     <span className="text-sm font-semibold">Estimated Taxes</span>
