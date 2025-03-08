@@ -3,6 +3,8 @@ import ProductPreviewByCategory from './Organisms/HomePage/productPreviewByCateg
 import CarouselProductSection from './Organisms/HomePage/carouselProductSection'
 import OutlookSection from './Organisms/HomePage/outlookSection'
 import ReviewCarousel from './Section/ReviewSection/ReviewCarousel'
+import ShopNowContainer from "./Section/ShopNowSection/ShopNowContainer";
+
 
 // import from other components
 import HeroSection from './Section/HeroSection/HeroSection'
@@ -19,6 +21,7 @@ export default function Homepage() {
             <CarouselProductSection/>
             <OutlookSection/>
             <ReviewCarousel/>
+            <ShopNowContainer />
         </>
     );
 }
