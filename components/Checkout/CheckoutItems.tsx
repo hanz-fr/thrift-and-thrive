@@ -4,22 +4,34 @@ import React, { useState } from 'react';
 import { Button, Input } from "@heroui/react";
 import CheckoutModal from '../Modal/CheckoutModal';
 
+interface Product {
+    id: number;
+    name: string;
+    category: string;
+    price: number;
+    quantity: number;
+    image: string;
+}
+
 interface CheckoutItemsProps {
     shippingMethod: string;
     paymentMethod: string;
 }
 
 export default function CheckoutItems({ shippingMethod, paymentMethod }: CheckoutItemsProps) {
-
     const [isLoading, setIsLoading] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const subtotal = 2000000;
+    const products: Product[] = [
+        { id: 1, name: "Men Top Black Puffed Jacket", category: "Clothes", price: 1000000, quantity: 1, image: "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1695659049-screen-shot-2023-09-25-at-12-09-40-pm-6511b418132ae.png?crop=1xw:1xh;center,top&resize=980:*" },
+        { id: 2, name: "Women Jacket", category: "Clothes", price: 1000000, quantity: 1, image: 'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1695659049-screen-shot-2023-09-25-at-12-09-40-pm-6511b418132ae.png?crop=1xw:1xh;center,top&resize=980:*' },
+    ];
+
+    const subtotal = products.reduce((acc, product) => acc + product.price, 0);
     const shippingCost = shippingMethod === 'express' ? 16000 : 0;
     const estimatedTaxes = 12000;
     const total = subtotal + shippingCost + estimatedTaxes;
 
-    // handle checkout and show modal
     const handleCheckout = () => {
         setIsLoading(true);
         setTimeout(() => {
@@ -33,23 +45,16 @@ export default function CheckoutItems({ shippingMethod, paymentMethod }: Checkou
             <h2 className="text-lg font-semibold mb-4">Your Cart</h2>
 
             <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gray-300 rounded"></div>
-                    <div>
-                        <p className="text-sm font-semibold">Men Top Black Puffed Jacket</p>
-                        <p className="text-xs text-gray-500">Clothes</p>
-                        <p className="text-sm font-bold">Rp. 1.000.000</p>
+                {products.map((product) => (
+                    <div key={product.id} className="flex items-center gap-4">
+                        <div className="w-16 h-16 bg-gray-300 rounded"></div>
+                        <div>
+                            <p className="text-sm font-semibold">{product.name}</p>
+                            <p className="text-xs text-gray-500">{product.category}</p>
+                            <p className="text-sm font-bold text-[#6A9C89]">Rp. {product.price.toLocaleString()}</p>
+                        </div>
                     </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gray-300 rounded"></div>
-                    <div>
-                        <p className="text-sm font-semibold">Women Jacket</p>
-                        <p className="text-xs text-gray-500">Clothes</p>
-                        <p className="text-sm font-bold">Rp. 1.000.000</p>
-                    </div>
-                </div>
+                ))}
             </div>
 
             <div className="mt-4 flex items-center gap-2">
@@ -77,19 +82,29 @@ export default function CheckoutItems({ shippingMethod, paymentMethod }: Checkou
                 <hr className="my-2" />
                 <div className="flex justify-between">
                     <span className="text-sm font-semibold">Total</span>
-                    <span className="text-lg font-bold">Rp. {total.toLocaleString()}</span>
+                    <span className="text-lg font-bold text-[#6A9C89]">Rp. {total.toLocaleString()}</span>
                 </div>
             </div>
 
             <Button
                 className="mt-6 w-full py-3 font-semibold text-white bg-[#16423C]"
                 isLoading={isLoading}
-                onClick={handleCheckout}
+                onPress={handleCheckout}
             >
                 {isLoading ? "Loading..." : "Checkout and Place Order"}
             </Button>
 
-            {isModalOpen && <CheckoutModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />}
+            {isModalOpen && (
+                <CheckoutModal
+                    isOpen={isModalOpen}
+                    setIsOpen={setIsModalOpen}
+                    subtotal={subtotal}
+                    shippingCost={shippingCost}
+                    estimatedTaxes={estimatedTaxes}
+                    total={total}
+                    products={products}
+                />
+            )}
         </div>
     );
 }
