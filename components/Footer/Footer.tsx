@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="flex-col mx-5">
+    <footer className="max-w-7xl sm:mx-auto overflow-x-hidden flex-col mx-3">
       <div className="flex justify-center sm:justify-start gap-6 sm:gap-44 text-xs sm:text-[16px]">
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Product</p>

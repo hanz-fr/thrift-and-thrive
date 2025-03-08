@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "H&M",
+        "image": "/img/hnm.png"
+    },
+    {
+        "id": 2,
+        "name": "GAP",
+        "image": "/img/gap.png"
+    },
+    {
+        "id": 3,
+        "name": "Dior",
+        "image": "/img/dior.png"
+    },
+    {
+        "id": 4,
+        "name": "Balenciaga",
+        "image": "/img/balenciaga.png"
+    },
+    {
+        "id": 5,
+        "name": "Nike",
+        "image": "/img/nike.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Prada",
+        "image": "/img/prada.png"
+    },
+    {
+        "id": 7,
+        "name": "Polo Ralph Lauren",
+        "image": "/img/ralphlauren.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Adidas",
+        "image": "/img/adidas.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Versace",
+        "image": "/img/versace.png"
+    }
+]

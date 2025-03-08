@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "product": "Clothing",
+        "image": "/img/clothes-cat.jpg"
+    },
+    {
+        "id": 2,
+        "product": "Shoes",
+        "image": "/img/shoes-cat.jpg"
+    },
+    {
+        "id": 3,
+        "product": "Bags",
+        "image": "/img/bag-cat.jpg"
+    },
+    {
+        "id": 4,
+        "product": "Accessories",
+        "image": "/img/accessories-cat.jpg"
+    },
+    {
+        "id": 5,
+        "product": "Outerwear",
+        "image": "/img/outerwear-cat.jpg"
+    }
+]

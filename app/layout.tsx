@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"]
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -26,10 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        />
+      </head>
       <body className={poppins.className}>
         <Providers>
-
-          <div className="max-w-7xl mx-auto overflow-x-hidden">
+          <div>
             {/* navbar */}
             <Navbar />
 
@@ -39,7 +44,10 @@ export default function RootLayout({
             <Footer />
           </div>
         </Providers>
-
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+          defer
+        ></script>
       </body>
     </html>
   );
