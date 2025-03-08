@@ -3,6 +3,7 @@
 import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 
 import React from "react";
+import { ThriftNThriveLogo } from "../Navbar/Navbar";
 
 export default function Footer() {
   return (
@@ -31,7 +32,9 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-between mt-20 md:mt-44 mb-24">
-        <div className="text-2xl md:text-8xl font-black">Logo Name</div>
+        <div className="text-2xl md:text-8xl font-black">
+          <ThriftNThriveLogo width="200" height="200" />
+        </div>
         <div className="w-1/2">
           At Thrift and Thrive, we believe fashion should be kind to the planet
           and your wallet. Our curated collection of pre-loved clothing and
@@ -40,13 +43,13 @@ export default function Footer() {
           upgrading your wardrobe—you’re helping the Earth thrive.
         </div>
       </div>
-      <hr className="my-3"/>
+      <hr className="my-3" />
       <div className="mb-14 flex justify-between">
         <p>All rights reserved Thrift & Thrive</p>
         <div className="flex gap-5">
-            <FaFacebook size={20}/>
-            <FaTwitter size={20}/>
-            <FaInstagram size={20}/>
+          <FaFacebook size={20} />
+          <FaTwitter size={20} />
+          <FaInstagram size={20} />
         </div>
       </div>
     </footer>
