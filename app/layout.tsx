@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Providers>
 
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto overflow-x-hidden">
             {/* navbar */}
             <Navbar />
 
