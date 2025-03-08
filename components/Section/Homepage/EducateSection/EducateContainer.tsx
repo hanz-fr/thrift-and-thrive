@@ -10,7 +10,7 @@ export default function EducateContainer() {
           <div data-aos="fade-up" className="flex flex-col gap-5">
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg ">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/fastfashion.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -19,7 +19,7 @@ export default function EducateContainer() {
             </div>
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/slowfashion.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -28,7 +28,7 @@ export default function EducateContainer() {
             </div>
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/upcycling.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -39,7 +39,7 @@ export default function EducateContainer() {
           <div className="flex flex-col gap-5">
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/fastfashion2.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -48,7 +48,7 @@ export default function EducateContainer() {
             </div>
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/thrift.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -57,7 +57,7 @@ export default function EducateContainer() {
             </div>
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/polyester.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -71,7 +71,7 @@ export default function EducateContainer() {
           >
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/fastfashion3.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -80,7 +80,7 @@ export default function EducateContainer() {
             </div>
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/econyl.jpg"}
                 alt={`ecofashionimg`}
                 fill
@@ -89,7 +89,7 @@ export default function EducateContainer() {
             </div>
             <div className="relative w-[100px] h-32 sm:w-[180px] sm:h-[270px] bg-slate-200 rounded-lg">
               <Image
-                className="overflow-hidden rounded-2xl"
+                className="overflow-hidden rounded-lg"
                 src={"/img/fastfashion4.jpg"}
                 alt={`ecofashionimg`}
                 fill
