@@ -64,10 +64,10 @@ export default function ReviewCarousel() {
           className="mySwiper"
         >
           {reviews.map((e: any) => (
-            <SwiperSlide className="p-2">
+            <SwiperSlide className="p-2 justify-center">
               <Card shadow="none" className="bg-[#D9D9D9] h-full">
                 <CardBody>
-                  <div className="flex gap-5 my-auto items-center">
+                  <div className="flex gap-5 my-auto items-center mx-auto">
                     <div className="w-fit h-fit">
                       <Image
                         className="rounded-xl profile-box-shadow"
