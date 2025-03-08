@@ -8,8 +8,10 @@ import { Button } from "@heroui/react";
 import { FaRandom, FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { PiShoppingCartLight } from "react-icons/pi";
+import { useRouter } from "next/navigation";
 
 export default function OutlookSection() {
+  const router = useRouter();
   const [openActionIndex, setOpenActionIndex] = useState<number | null>(null);
 
   // Fungsi untuk toggle button action berdasarkan indeks
@@ -77,7 +79,7 @@ export default function OutlookSection() {
 
                 {/* Main Button */}
                 <Button
-                  onClick={() => {}}
+                  onPress={() => {router.push('/product')}}
                   variant="light"
                   className={`relative px-2 py-2 rounded-bl-xl transition-all duration-300 ${
                     openActionIndex === 1 ? "" : "rounded-tl-xl"
@@ -130,7 +132,7 @@ export default function OutlookSection() {
 
                 {/* Main Button */}
                 <Button
-                  onClick={() => {}}
+                  onPress={() => {router.push('/product')}}
                   variant="light"
                   className={`relative px-2 py-2 rounded-bl-xl transition-all duration-300 ${
                     openActionIndex === 1 ? "" : "rounded-tl-xl"
@@ -184,7 +186,7 @@ export default function OutlookSection() {
 
                 {/* Main Button */}
                 <Button
-                  onClick={() => {}}
+                  onPress={() => {router.push('/product')}}
                   variant="light"
                   className={`relative px-2 py-2 rounded-bl-xl transition-all duration-300 ${
                     openActionIndex === 1 ? "" : "rounded-tl-xl"
@@ -237,7 +239,7 @@ export default function OutlookSection() {
 
                 {/* Main Button */}
                 <Button
-                  onClick={() => {}}
+                  onPress={() => {router.push('/product')}}
                   variant="light"
                   className={`relative px-2 py-2 rounded-bl-xl transition-all duration-300 ${
                     openActionIndex === 1 ? "" : "rounded-tl-xl"

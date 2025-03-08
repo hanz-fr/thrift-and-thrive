@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 
@@ -9,7 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
-import styles from "./styles.module.css";
 
 // Import icon
 import { BsArrowUpRight } from "react-icons/bs";
@@ -23,6 +23,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import products from "@/PRODUCTS_DATA.json";
 
 export default function CarouselProductSection() {
+  const router = useRouter();
   const [openActionIndex, setOpenActionIndex] = useState<number | null>(null);
 
   // Fungsi untuk toggle button action berdasarkan indeks
@@ -37,7 +38,7 @@ export default function CarouselProductSection() {
     <div className="max-w-7xl mx-auto overflow-x-hidden flex flex-col gap-4 px-6 py-8 mt-24 sm:mt-40">
       <div className="flex items-center justify-between ">
         <h1 className="text-xl md:text-2xl font-semibold">Latest Product</h1>
-        <button className="flex gap-3 items-center text-sm md:text-base font-semibold text-black border border-black rounded-full py-1 md:py-2 px-4">
+        <button onClick={()=>{router.push('/product')}} className="flex gap-3 items-center text-sm md:text-base font-semibold text-black border border-black rounded-full py-1 md:py-2 px-4">
           Shop Now
           <BsArrowUpRight />
         </button>
@@ -81,7 +82,7 @@ export default function CarouselProductSection() {
           }}
         >
           {products.map((e: any) => (
-            <SwiperSlide>
+            <SwiperSlide key={e.id}>
               <div key={e.id} className="flex flex-col min-w-60 gap-4">
                 <div className="relative border h-72 rounded-2xl bg-slate-300">
                   <Image
@@ -106,18 +107,18 @@ export default function CarouselProductSection() {
                           : "opacity-0 translate-y-2 scale-95 pointer-events-none"
                       }`}
                     >
-                      <button className="px-2 py-2 text-black hover:bg-gray-300">
+                      <button onClick={()=>router.push('/product')} className="px-2 py-2 text-black hover:bg-gray-300">
                         <FaRandom />
                       </button>
-                      <button className="px-2 py-2 text-black hover:bg-gray-300">
+                      <button onClick={()=>router.push('/wishlist')} className="px-2 py-2 text-black hover:bg-gray-300">
                         <FaRegHeart />
                       </button>
-                      <button className="px-2 py-2 text-black hover:bg-gray-300">
+                      <button onClick={()=>router.push(`/product/${e.id}`)} className="px-2 py-2 text-black hover:bg-gray-300">
                         <IoEyeOutline />
                       </button>
                     </div>
 
-                    {/* Main Button */}
+                    {/* Main button */}
                     <button
                       onClick={() => toggleAction(e.id)}
                       className={`relative px-2 py-2 text-white bg-black rounded-bl-xl transition-all duration-300 ${

@@ -10,24 +10,24 @@ export default function Footer() {
       <div className="flex justify-center sm:justify-start gap-6 sm:gap-44 text-xs sm:text-[16px]">
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Product</p>
-          <p>Clothings</p>
-          <p>Shoes</p>
-          <p>Bags</p>
-          <p>Accessories</p>
+          <a href="/product">Clothings</a>
+          <a href="/product">Shoes</a>
+          <a href="/product">Bags</a>
+          <a href="/product">Accessories</a>
         </div>
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Company</p>
-          <p>About Us</p>
-          <p>Customer story</p>
-          <p>Contact Us</p>
-          <p>Blog</p>
+          <a href="/about-us">About Us</a>
+          <a href="/customer-stories">Customer story</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/blog">Blog</a>
         </div>
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Help</p>
-          <p>FAQs</p>
-          <p>Returns/Refunds</p>
-          <p>Cancellation Policy</p>
-          <p>Track Order</p>
+          <a href="/faq">FAQs</a>
+          <a>Returns/Refunds</a>
+          <a>Cancellation aolicy</a>
+          <a>Track Order</a>
         </div>
       </div>
       <div className="flex justify-between mt-20 md:mt-44 mb-24">
