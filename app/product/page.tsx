@@ -100,7 +100,7 @@ export default function AllProducts() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full h-40 rounded-md object-contain"
+                    className="w-full h-44 rounded-md object-cover"
                     src={`/img/${product.image}`}
                     alt=""
                   />
