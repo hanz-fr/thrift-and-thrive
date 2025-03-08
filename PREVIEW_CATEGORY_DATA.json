@@ -1,0 +1,147 @@
+[
+{
+  "category": "Clothes",
+  "items": [
+    {
+      "name": "Denim Jacket",
+      "sustainability": [
+        "Daya tahan tinggi, bisa dipakai bertahun-tahun tanpa cepat rusak.",
+        "Bahan katun alami yang bisa didaur ulang.",
+        "Semakin sering digunakan, semakin nyaman dan modis."
+      ]
+    },
+    {
+      "name": "Neck Turtle",
+      "sustainability": [
+        "Menggunakan bahan rajut yang awet dan tidak mudah melar.",
+        "Dapat digunakan di berbagai musim, mengurangi kebutuhan pakaian berlebih.",
+        "Bisa dipadukan dengan berbagai gaya tanpa ketinggalan zaman."
+      ]
+    },
+    {
+      "name": "Blazer",
+      "sustainability": [
+        "Bahan berkualitas tinggi yang tahan lama.",
+        "Dapat digunakan dalam berbagai acara formal dan kasual, mengurangi konsumsi pakaian baru.",
+        "Mudah diperbaiki atau dimodifikasi untuk penggunaan jangka panjang."
+      ]
+    },
+    {
+      "name": "Sweat Shirt",
+      "sustainability": [
+        "Terbuat dari bahan katun tebal yang tahan lama dan nyaman.",
+        "Cocok untuk berbagai cuaca, mengurangi pembelian pakaian musiman.",
+        "Bisa digunakan sebagai pakaian kasual dan olahraga."
+      ]
+    },
+    {
+      "name": "Hoodie",
+      "sustainability": [
+        "Dapat bertahan bertahun-tahun dengan perawatan yang minimal.",
+        "Serbaguna dan bisa digunakan dalam berbagai aktivitas sehari-hari.",
+        "Mudah didaur ulang atau disumbangkan jika sudah tidak terpakai."
+      ]
+    },
+    {
+      "name": "Sweater",
+      "sustainability": [
+        "Terbuat dari bahan rajut atau wol yang tahan lama.",
+        "Memberikan kehangatan alami tanpa perlu pakaian berlapis-lapis.",
+        "Dapat dicuci tanpa sering merusak kualitas bahannya."
+      ]
+    },
+    {
+      "name": "Shirt",
+      "sustainability": [
+        "Menggunakan bahan katun organik yang lebih ramah lingkungan.",
+        "Desain klasik yang tidak ketinggalan zaman, cocok untuk berbagai kesempatan.",
+        "Mudah dirawat dan bisa digunakan dalam jangka waktu lama."
+      ]
+    }
+  ]
+},
+    {
+      "category": "Shoes",
+      "items": [
+        {
+          "name": "Sneakers",
+          "sustainability": [
+            "Terbuat dari bahan daur ulang seperti botol plastik dan karet.",
+            "Desain yang tahan lama sehingga bisa digunakan bertahun-tahun.",
+            "Nyaman dipakai dan tidak cepat rusak meskipun sering digunakan."
+          ]
+        },
+        {
+          "name": "Leather Boots",
+          "sustainability": [
+            "Dibuat dari kulit berkualitas yang tahan lama dengan perawatan yang baik.",
+            "Bisa diperbaiki dengan resole dan repaint, memperpanjang masa pakai.",
+            "Didesain untuk berbagai kondisi cuaca tanpa perlu sering membeli sepatu baru."
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Bags",
+      "items": [
+        {
+          "name": "Tote Bag",
+          "sustainability": [
+            "Terbuat dari kain kanvas atau katun daur ulang.",
+            "Dapat digunakan berkali-kali untuk menggantikan plastik sekali pakai.",
+            "Mudah dicuci dan awet untuk penggunaan jangka panjang."
+          ]
+        },
+        {
+          "name": "Backpack",
+          "sustainability": [
+            "Dibuat dari bahan daur ulang seperti polyester bekas.",
+            "Desain multifungsi yang memungkinkan penggunaan untuk berbagai kebutuhan.",
+            "Tahan lama dan bisa diperbaiki jika rusak, mengurangi limbah fashion."
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Accessories",
+      "items": [
+        {
+          "name": "Sunglasses",
+          "sustainability": [
+            "Dibuat dari bahan bambu atau plastik daur ulang.",
+            "Tahan lama dan ringan, cocok untuk penggunaan jangka panjang.",
+            "Dapat dikombinasikan dengan berbagai gaya tanpa ketinggalan zaman."
+          ]
+        },
+        {
+          "name": "Wristwatch",
+          "sustainability": [
+            "Menggunakan strap dari kulit vegan atau bahan daur ulang.",
+            "Mekanisme jam yang awet sehingga tidak perlu sering mengganti.",
+            "Didesain minimalis agar tetap relevan sepanjang waktu."
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Outerwear",
+      "items": [
+        {
+          "name": "Parka",
+          "sustainability": [
+            "Menggunakan bahan tahan air yang ramah lingkungan.",
+            "Dapat digunakan di berbagai kondisi cuaca, mengurangi kebutuhan pakaian musiman.",
+            "Didesain untuk pemakaian bertahun-tahun tanpa kehilangan kualitas."
+          ]
+        },
+        {
+          "name": "Windbreaker",
+          "sustainability": [
+            "Terbuat dari polyester daur ulang yang ringan namun tahan lama.",
+            "Cocok untuk berbagai aktivitas outdoor tanpa perlu membeli jaket baru setiap musim.",
+            "Memiliki fitur tahan angin dan air untuk perlindungan maksimal."
+          ]
+        }
+      ]
+    }
+  ]
