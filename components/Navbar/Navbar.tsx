@@ -52,10 +52,10 @@ export default function Navbar() {
         <Navbars onMenuOpenChange={setIsMenuOpen} className="px-4">
             <NavbarContent className="hidden sm:flex gap-8">
                 {[
-                    { label: "Man", href: "#" },
-                    { label: "Woman", href: "#" },
-                    { label: "Kids", href: "#" },
-                    { label: "Sale", href: "#", className: "font-semibold text-danger" }
+                    { label: "Man", href: "/product" },
+                    { label: "Woman", href: "/product" },
+                    { label: "Kids", href: "/product" },
+                    { label: "Sale", href: "/product", className: "font-semibold text-danger" }
                 ].map((item, index) => (
                     <NavbarItem key={index}>
                         <Link className={`text-sm ${item.className || ""}`} color="foreground" href={item.href}>
@@ -68,26 +68,28 @@ export default function Navbar() {
             <NavbarContent className="flex gap-2 sm:gap-4">
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
                 <NavbarBrand className="flex justify-center items-center">
-                    <AcmeLogo />
-                    <p className="font-bold text-inherit ml-1">Name or Logo</p>
+                    <Link href="/"  className="text-black">
+                        <AcmeLogo />
+                        <p className="font-bold text-inherit ml-1">Name or Logo</p>
+                    </Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent justify="end" className="ml-auto flex gap-8 sm:mt-2">
                 <NavbarItem className="cursor-pointer hidden lg:flex">
-                    <Link href="#">
+                    <Link href="/user">
                         <AiOutlineUser className="text-neutral-800" fontSize={22} />
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className="cursor-pointer lg:flex">
+                    <Link href="/wishlist" className="cursor-pointer lg:flex">
                         <Badge color="danger" content="0">
                             <BsHeart className="text-neutral-800" fontSize={18} />
                         </Badge>
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link className="cursor-pointer lg:flex">
+                    <Link href="/carts" className="cursor-pointer lg:flex">
                         <Badge color="danger" content="3">
                             <BsCart2 className="text-neutral-800" fontSize={20} />
                         </Badge>

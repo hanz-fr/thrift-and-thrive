@@ -1,8 +1,11 @@
 import React from "react";
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HeroSection() {
+  const router = useRouter();
+
   return (
     <section className="relative max-w-7xl mx-auto overflow-x-hidden min-h-[80vh] flex justify-center px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
       <div
@@ -64,7 +67,7 @@ export default function HeroSection() {
           giving high-quality pieces a second chance. Every purchase helps
           reduce waste and supports a sustainable future for fashion.
         </p>
-        <Button className="bg-black text-white" size="md" radius="full">
+        <Button onPress={()=>router.push('/product')} className="bg-black text-white" size="md" radius="full">
           Shop now
         </Button>
       </div>
