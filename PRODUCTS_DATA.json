@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "clothes": "Denim",
+        "type": "Clothes",
+        "price": 4500000,
+        "image": "denimjacket.jpg"
+    },
+    {
+        "id": 2,
+        "clothes": "T-shirt",
+        "type": "Clothes",
+        "price": 1500000,
+        "image": "tshirt.jpg"
+    },
+    {
+        "id": 3,
+        "clothes": "Jacket",
+        "type": "Clothes",
+        "price": 3500000,
+        "image": "jacket.jpg"
+    },
+    {
+        "id": 4,
+        "clothes": "Sweater",
+        "type": "Clothes",
+        "price": 2200000,
+        "image": "sweater.jpg"
+    },
+    {
+        "id": 5,
+        "clothes": "Shorts",
+        "type": "Clothes",
+        "price": 1200000,
+        "image": "shorts.jpg"
+    },
+    {
+        "id": 6,
+        "clothes": "Blouse",
+        "type": "Clothes",
+        "price": 1800000,
+        "image": "blouse.jpg"
+    },
+    {
+        "id": 7,
+        "clothes": "Skirt",
+        "type": "Clothes",
+        "price": 2500000,
+        "image": "skirt.jpg"
+    },
+    {
+        "id": 8,
+        "clothes": "Jumpsuit",
+        "type": "Clothes",
+        "price": 4000000,
+        "image": "jumpsuit.jpg"
+    },
+    {
+        "id": 9,
+        "clothes": "Hoodie",
+        "type": "Clothes",
+        "price": 1700000,
+        "image": "hoodie.jpg"
+    }
+]
