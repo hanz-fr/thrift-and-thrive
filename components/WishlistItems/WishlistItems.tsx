@@ -39,7 +39,7 @@ export default function WishlistItems() {
                 </div>
 
                 <div className='self-center'>
-                    <Pagination color='primary' showControls initialPage={1} total={10} />
+                    <Pagination size='sm' color='primary' showControls initialPage={1} total={10} />
                 </div>
             </div>
         </div>
