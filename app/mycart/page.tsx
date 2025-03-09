@@ -1,10 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
+
+// import components from other components
 import CartItems from "@/components/Cart/CartItems";
 import CartTotals from "@/components/Cart/CartTotals";
+
+// import button from heroui
 import { Button } from "@heroui/react";
+
+// import navigation from next/router
 import { useRouter } from "next/navigation";
+
+// import product data
 import products from "@/PRODUCTS_DATA.json"; // Import data produk
 
 export default function CartPage() {
