@@ -36,12 +36,12 @@ export default function RootLayout({
         <Providers>
           <div>
             {/* navbar */}
-            <Navbar />
+            {/* <Navbar /> */}
 
             {children}
 
             {/* footer */}
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </Providers>
         <script

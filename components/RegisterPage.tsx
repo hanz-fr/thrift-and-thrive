@@ -141,7 +141,7 @@ export default function RegisterPage() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='relative'>
-                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353750.jpg" alt="Carousel 3" className='h-[500px] w-full object-cover rounded-xl' />
+                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353752.jpg?t=st=1741522224~exp=1741525824~hmac=a0708a36490f5f8c2c0aaa5ce34e85abe296e6f49421ad841e93cc69770e88a8&w=1800" alt="Carousel 3" className='h-[500px] w-full object-cover rounded-xl' />
                             <div className="absolute bottom-10 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2 rounded-b-lg">
                                 <h6 className='text-lg'>Support Sustainable Fashion</h6>
                                 <p className='text-[12px]'>Be stylish without harming the environment with the best thrift options.</p>

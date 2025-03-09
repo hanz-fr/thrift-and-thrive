@@ -108,7 +108,7 @@ export default function LoginPage() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='relative'>
-                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353750.jpg?t=st=1741455706~exp=1741459306~hmac=9b35ca2a444df71b8d17a33ff638b57752d5e285256642c0c0e50b4e97de71d9&w=1800" alt="Carousel 3" className='h-[500px] w-full object-cover rounded-xl' />
+                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353752.jpg?t=st=1741522224~exp=1741525824~hmac=a0708a36490f5f8c2c0aaa5ce34e85abe296e6f49421ad841e93cc69770e88a8&w=1800" alt="Carousel 3" className='h-[500px] w-full object-cover rounded-xl' />
                             <div className="flex flex-col gap-2 absolute bottom-10 left-0 w-full bg-black bg-opacity-50 text-white text-center items-center p-2 rounded-b-lg">
                                 <h6 className='text-lg'>Support Sustainable Fashion</h6>
                                 <p className='text-[12px]'>Be stylish without harming the environment with the best thrift options.</p>
