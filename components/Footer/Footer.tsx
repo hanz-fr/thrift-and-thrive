@@ -27,8 +27,7 @@ export default function Footer() {
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Help</p>
           <Link href="/faq">FAQs</Link>
-          <a>Returns/Refunds</a>
-          <a>Cancellation aolicy</a>
+          <a>Cancellation policy</a>
           <a>Track Order</a>
         </div>
       </div>
