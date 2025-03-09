@@ -26,7 +26,6 @@ body {
   font-family: var(--font-poppins), sans-serif;
 }
 
-
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Untuk browser berbasis WebKit (Chrome, Safari) */
 }
@@ -38,4 +37,50 @@ body {
 
 .profile-box-shadow {
   box-shadow: -5px 5px 0px black;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: gray !important; /* Warna abu */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: black !important; /* Warna hitam saat hover */
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
 }

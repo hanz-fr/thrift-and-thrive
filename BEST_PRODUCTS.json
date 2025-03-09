@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "product": "Hoodie",
+        "image": "/img/hoodiethrift.jpg"
+    },
+    {
+        "id": 2,
+        "product": "Hoodie",
+        "image": "/img/hoodiethrift2.jpg"
+    },
+    {
+        "id": 3,
+        "product": "Levis",
+        "image": "/img/levisthrift.jpg"
+    },
+    {
+        "id": 4,
+        "product": "Fila",
+        "image": "/img/filathrift.jpg"
+    },
+    {
+        "id": 5,
+        "product": "Dress",
+        "image": "/img/dressthrift.jpg"
+    }
+]
