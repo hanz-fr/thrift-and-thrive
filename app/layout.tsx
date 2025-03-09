@@ -31,12 +31,12 @@ export default function RootLayout({
 
           <div className="max-w-7xl mx-auto overflow-x-hidden">
             {/* navbar */}
-            <Navbar />
+            {/* <Navbar /> */}
 
             {children}
 
             {/* footer */}
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </Providers>
 
