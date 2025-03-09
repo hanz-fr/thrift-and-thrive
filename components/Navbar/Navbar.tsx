@@ -164,7 +164,7 @@ export default function Navbar() {
 
       <NavbarContent justify="end" className="ml-auto flex gap-8 sm:mt-2">
         <NavbarItem className="cursor-pointer hidden lg:flex">
-          <Link href="/user" onClick={() => setIsMenuOpen(false)}>
+          <Link href="/profile" onClick={() => setIsMenuOpen(false)}>
             <AiOutlineUser className="text-neutral-800" fontSize={22} />
           </Link>
         </NavbarItem>
