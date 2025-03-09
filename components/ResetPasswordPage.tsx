@@ -18,28 +18,41 @@ import { Button, Input, Link } from '@heroui/react';
 // import icons from react-icons
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
-export default function LoginPage() {
-
+export default function ResetPasswordPage() {
     // toggle password visibility
     const [isVisible, setIsVisible] = useState(false);
     const toggleVisibility = () => setIsVisible(!isVisible);
 
     return (
-        <div className='flex flex-col md:flex-row min-h-screen justify-center items-center p-6 bg-gray-100'>
+        <div className='flex flex-col md:flex-row min-h-screen items-center justify-center p-6 bg-gray-100'>
             <div className='w-full md:w-1/2 flex items-center justify-center p-6'>
                 <main className="w-full h-full max-w-md">
-                    <h6 className='text-sm font-semibold'>Welcome back to Thrift and Thrive!</h6>
-                    <h1 className="mb-6 text-2xl font-semibold text-gray-800">
-                        Login to your account
+                    <h1 className="text-3xl font-semibold text-gray-800">
+                        Reset Password
                     </h1>
+                    <h6 className='text-sm mb-6  font-semibold'>Enter your email to be sent a password recovery link!</h6>
                     <form>
                         <div className='flex flex-col gap-4'>
                             <div className="mb-4">
                                 <Input
                                     required
-                                    label="Email*"
-                                    placeholder="Enter your email"
-                                    type="email"
+                                    endContent={
+                                        <button
+                                            aria-label="toggle password visibility"
+                                            className="focus:outline-none"
+                                            type="button"
+                                            onClick={toggleVisibility}
+                                        >
+                                            {isVisible ? (
+                                                <FaEyeSlash className="text-xl text-gray-500" />
+                                            ) : (
+                                                <FaEye className="text-xl text-gray-500" />
+                                            )}
+                                        </button>
+                                    }
+                                    label="New Password*"
+                                    placeholder="Enter your new password"
+                                    type={isVisible ? "text" : "password"}
                                     className="w-full"
                                 />
                             </div>
@@ -60,8 +73,8 @@ export default function LoginPage() {
                                             )}
                                         </button>
                                     }
-                                    label="Password*"
-                                    placeholder="Enter your password"
+                                    label="Confirm Password*"
+                                    placeholder="Confirm your password"
                                     type={isVisible ? "text" : "password"}
                                     className="w-full"
                                 />
@@ -72,8 +85,8 @@ export default function LoginPage() {
                                 Forget Password?
                             </Link>
                         </div>
-                        <Button type='submit' className='w-full h-12 px-4 py-2 text-md text-white bg-[#16423C]'>
-                            Login
+                        <Button type='submit' className='w-full h-12 px-4 py-2 text-sm text-white bg-[#16423C]'>
+                            Reset Password
                         </Button>
                     </form>
                 </main>
@@ -120,3 +133,4 @@ export default function LoginPage() {
         </div>
     )
 }
+
