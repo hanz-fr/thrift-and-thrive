@@ -1,14 +1,19 @@
 'use client';
 
-import React from 'react';
-
-// import component from heroui
+import React, { useState } from 'react';
 import { Pagination } from '@heroui/react';
-
-// import icon from react-icons
-import { BsHeartFill } from "react-icons/bs";;
+import { BsHeartFill } from "react-icons/bs";
+import DeleteInWishlist from '../Modal/DeleteInWishlist';
 
 export default function WishlistItems() {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [selectedItem, setSelectedItem] = useState<number | null>(null);
+
+    const handleDeleteClick = (item: number) => {
+        setSelectedItem(item);
+        setIsModalOpen(true);
+    };
+
     return (
         <div className="flex flex-col p-8 my-12">
             <div>
@@ -21,7 +26,7 @@ export default function WishlistItems() {
                     <hr className="h-px my-2 bg-gray-500 border-0" />
                 </div>
 
-                <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {[...Array(12)].map((_, i) => (
                         <div key={i} className="flex flex-col border rounded-2xl overflow-hidden">
                             <div className="h-64 bg-gray-300"></div>
@@ -30,7 +35,7 @@ export default function WishlistItems() {
                                     <h3 className="text-sm font-semibold">Product Name</h3>
                                     <p className="text-xs text-gray-500">Rp.</p>
                                 </div>
-                                <button>
+                                <button onClick={() => handleDeleteClick(i)}>
                                     <BsHeartFill color='red' />
                                 </button>
                             </div>
@@ -42,6 +47,12 @@ export default function WishlistItems() {
                     <Pagination size='sm' color='primary' showControls initialPage={1} total={10} />
                 </div>
             </div>
+
+            <DeleteInWishlist
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                item={selectedItem}
+            />
         </div>
     );
 }
