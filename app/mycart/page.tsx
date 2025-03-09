@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 // import from other components
 import CartItems from "@/components/Cart/CartItems";
-import CartTotals from "@/components/Cart/CartItems";
+import CartTotals from "@/components/Cart/CartTotals";
 
 // import button from heroui
 import { Button } from "@heroui/react";
@@ -28,7 +28,7 @@ export default function CartPage() {
     <div className="px-6 sm:px-12 md:px-16 lg:px-6 xl:px-28 flex flex-col p-6 my-8">
       <h1 className="text-lg sm:text-xl md:text-2xl font-semibold">My Cart</h1>
       <div className="py-6">
-        <h5 className="text-sm">Total Product in Cart: 3</h5>
+        <h5 className="text-sm">Total Product in Cart: 9</h5>
         <hr className="h-px my-2 bg-gray-500 border-0" />
       </div>
 
