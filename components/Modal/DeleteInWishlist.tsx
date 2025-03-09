@@ -13,10 +13,11 @@ import {
 interface DeleteInWishlistProps {
     isOpen: boolean;
     onClose: () => void;
-    item: number | null;
+    onConfirm: () => void;
+    product: any | null;
 }
 
-const DeleteInWishlist: React.FC<DeleteInWishlistProps> = ({ isOpen, onClose, item }) => {
+const DeleteInWishlist: React.FC<DeleteInWishlistProps> = ({ isOpen, onClose, onConfirm, product }) => {
     return (
         <Modal isOpen={isOpen} onOpenChange={onClose}>
             <ModalContent>
@@ -24,13 +25,21 @@ const DeleteInWishlist: React.FC<DeleteInWishlistProps> = ({ isOpen, onClose, it
                     <ModalHeader className="flex flex-col gap-1">Remove from Wishlist</ModalHeader>
                     <ModalBody>
                         <p>Are you sure you want to remove this product from your wishlist?</p>
-                        {item !== null ? <p><strong>Product #{item}</strong></p> : null}
+                        {product && (
+                            <div className="flex items-center gap-4 mt-4">
+                                <img src={`/img/${product.image}`} alt={product.clothes} className="w-16 h-16 object-cover rounded-md" />
+                                <div>
+                                    <p className="font-semibold">{product.clothes}</p>
+                                    <p className="text-sm text-gray-500">Rp. {product.price.toLocaleString()}</p>
+                                </div>
+                            </div>
+                        )}
                     </ModalBody>
                     <ModalFooter>
                         <Button color="danger" variant="light" onPress={onClose}>
                             Cancel
                         </Button>
-                        <Button className='bg-[#16423C] text-white' onPress={onClose}>
+                        <Button className='bg-[#16423C] text-white' onPress={onConfirm}>
                             Remove
                         </Button>
                     </ModalFooter>
