@@ -20,7 +20,7 @@ export default function RegisterPage() {
     const toggleVisibility = () => setIsVisible(!isVisible);
 
     return (
-        <div className='flex flex-col md:flex-row min-h-screen p-6 bg-gray-100'>
+        <div className='flex flex-col md:flex-row min-h-screen p-6 bg-gray-100 shadow-lg'>
             <div className='w-full md:w-1/2 flex items-center justify-center p-6'>
                 <main className="w-full max-w-md">
                     <h6 className='text-sm font-semibold'>Welcome to Thrift and Thrive!</h6>
@@ -115,7 +115,7 @@ export default function RegisterPage() {
                 >
                     <SwiperSlide>
                         <div className='relative'>
-                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353748.jpg" alt="Carousel 1" className='h-[400px] w-full object-cover rounded-xl' />
+                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353748.jpg" alt="Carousel 1" className='h-[500px] w-full object-cover rounded-xl' />
                             <div className="absolute bottom-10 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2 rounded-b-lg">
                                 <h6 className='text-lg'>Find Your Unique Style</h6>
                                 <p className='text-[12px]'>A collection of quality thrift fashion at affordable prices.</p>
@@ -124,7 +124,7 @@ export default function RegisterPage() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='relative'>
-                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353732.jpg" alt="Carousel 2" className='h-[400px] w-full object-cover rounded-xl' />
+                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353732.jpg" alt="Carousel 2" className='h-[500px] w-full object-cover rounded-xl' />
                             <div className="absolute bottom-10 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2 rounded-b-lg">
                                 <h6 className='text-lg'>Thrifty & Stylish</h6>
                                 <p className='text-[12px]'>Shop for high-quality second-hand clothing at the best prices.</p>
@@ -133,7 +133,7 @@ export default function RegisterPage() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='relative'>
-                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353750.jpg" alt="Carousel 3" className='h-[400px] w-full object-cover rounded-xl' />
+                            <img src="https://img.freepik.com/free-photo/friends-shopping-second-hand-market_23-2149353750.jpg" alt="Carousel 3" className='h-[500px] w-full object-cover rounded-xl' />
                             <div className="absolute bottom-10 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2 rounded-b-lg">
                                 <h6 className='text-lg'>Support Sustainable Fashion</h6>
                                 <p className='text-[12px]'>Be stylish without harming the environment with the best thrift options.</p>
