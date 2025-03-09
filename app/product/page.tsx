@@ -28,7 +28,7 @@ export default function AllProducts() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 flex gap-8">
+    <div className="px-6 py-12 flex gap-8">
       {/* Filter Section */}
       <aside className="w-1/4 hidden md:block">
         <motion.div
