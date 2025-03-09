@@ -1,7 +1,13 @@
 'use client';
 import React, { useState } from 'react';
+
+// import components from heroui
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Spinner } from "@heroui/react";
+
+// import icons from react-icons
 import { AiFillCloseCircle } from "react-icons/ai";
+
+// import CheckoutItems from other components
 import OrderSuccessfulModal from './OrderSuccessfulModal';
 
 interface Product {
