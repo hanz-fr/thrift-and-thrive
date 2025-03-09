@@ -22,7 +22,11 @@ import { IoEyeOutline } from "react-icons/io5";
 
 import products from "@/PRODUCTS_DATA.json";
 
-export default function CarouselProductSection() {
+interface CarouselProps{
+  withSpace? : boolean
+}
+
+export default function CarouselProductSection({withSpace = true}:CarouselProps) {
   const router = useRouter();
   const [openActionIndex, setOpenActionIndex] = useState<number | null>(null);
 
@@ -35,7 +39,7 @@ export default function CarouselProductSection() {
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
   return (
-    <div className="max-w-7xl mx-auto overflow-x-hidden flex flex-col gap-4 px-6 py-8 mt-24 sm:mt-40">
+    <div className={`max-w-7xl mx-auto overflow-x-hidden flex flex-col gap-4 px-6 ${withSpace ? 'py-8 mt-24 sm:mt-40' : '' } `}>
       <div className="flex items-center justify-between ">
         <h1 className="text-xl md:text-2xl font-semibold">Latest Product</h1>
         <button onClick={()=>{router.push('/product')}} className="flex gap-3 items-center text-sm md:text-base font-semibold text-black border border-black rounded-full py-1 md:py-2 px-4">
