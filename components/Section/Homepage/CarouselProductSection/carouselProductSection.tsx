@@ -71,7 +71,7 @@ export default function CarouselProductSection({withSpace = true}:CarouselProps)
             640: { slidesPerView: 5 },
           }}
           loop={true}
-          spaceBetween={20}
+          spaceBetween={100}
           onInit={(swiper) => {
             setTimeout(() => {
               if (swiper?.params?.navigation) {
