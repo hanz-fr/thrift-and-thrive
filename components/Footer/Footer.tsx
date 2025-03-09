@@ -4,6 +4,7 @@ import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 
 import React from "react";
 import { ThriftNThriveLogo } from "../Navbar/Navbar";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,21 +12,21 @@ export default function Footer() {
       <div className="flex justify-center sm:justify-start gap-6 sm:gap-44 text-xs sm:text-[16px]">
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Product</p>
-          <a href="/product">Clothings</a>
-          <a href="/product">Shoes</a>
-          <a href="/product">Bags</a>
-          <a href="/product">Accessories</a>
+          <Link href="/product">Clothings</Link>
+          <Link href="/product">Shoes</Link>
+          <Link href="/product">Bags</Link>
+          <Link href="/product">Accessories</Link>
         </div>
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Company</p>
-          <a href="/about-us">About Us</a>
-          <a href="/customer-stories">Customer story</a>
-          <a href="/contact">Contact Us</a>
-          <a href="/blog">Blog</a>
+          <Link href="/about-us">About Us</Link>
+          <Link href="/customer-stories">Customer story</Link>
+          <Link href="/contact">Contact Us</Link>
+          <Link href="/blog">Blog</Link>
         </div>
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Help</p>
-          <a href="/faq">FAQs</a>
+          <Link href="/faq">FAQs</Link>
           <a>Returns/Refunds</a>
           <a>Cancellation aolicy</a>
           <a>Track Order</a>

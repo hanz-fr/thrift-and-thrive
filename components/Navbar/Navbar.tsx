@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 // Import dari HeroUI
 import {
@@ -11,7 +12,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
   Badge,
 } from "@heroui/react";
 
@@ -75,20 +75,58 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    {
+      item: "Man",
+      href: "/product",
+    },
+    {
+      item: "Woman",
+      href: "/product",
+    },
+    {
+      item: "Kids",
+      href: "/product",
+    },
+    {
+      item: "Sale",
+      href: "/product",
+    },
+    {
+      item: "New Arrivals",
+      href: "/product",
+    },
+    {
+      item: "Clothing Brands",
+      href: "/product",
+    },
+    {
+      item: "Shoes",
+      href: "/product",
+    },
+    {
+      item: "Bags",
+      href: "/product",
+    },
+    {
+      item: "Accessories",
+      href: "/product",
+    },
+    {
+      item: "My Profile",
+      href: "/profile",
+    },
+    {
+      item: "Logout",
+      href: "#",
+    },
   ];
 
   return (
-    <Navbars onMenuOpenChange={setIsMenuOpen} className="px-4">
+    <Navbars
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="px-4"
+    >
       <NavbarContent className="hidden sm:flex gap-8">
         {[
           { label: "Man", href: "/product" },
@@ -118,7 +156,7 @@ export default function Navbar() {
           className="sm:hidden"
         />
         <NavbarBrand className="flex justify-center items-center">
-          <Link href="/" className="text-black">
+          <Link href="/" onClick={() => setIsMenuOpen(false)} className="text-black" >
             <ThriftNThriveLogo width="50" height="50" />
           </Link>
         </NavbarBrand>
@@ -126,19 +164,27 @@ export default function Navbar() {
 
       <NavbarContent justify="end" className="ml-auto flex gap-8 sm:mt-2">
         <NavbarItem className="cursor-pointer hidden lg:flex">
-          <Link href="/user">
+          <Link href="/user" onClick={() => setIsMenuOpen(false)}>
             <AiOutlineUser className="text-neutral-800" fontSize={22} />
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/wishlist" className="cursor-pointer lg:flex">
+          <Link
+            href="/wishlist"
+            className="cursor-pointer lg:flex"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <Badge color="danger" content="0">
               <BsHeart className="text-neutral-800" fontSize={18} />
             </Badge>
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="/carts" className="cursor-pointer lg:flex">
+          <Link
+            href="/mycart"
+            className="cursor-pointer lg:flex"
+            onClick={() => setIsMenuOpen(false)}
+          >
             <Badge color="danger" content="3">
               <BsCart2 className="text-neutral-800" fontSize={20} />
             </Badge>
@@ -147,21 +193,16 @@ export default function Navbar() {
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {menuItems.map((e, index) => (
+          <NavbarMenuItem key={`${e}-${index}`}>
             <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
+              className={`w-full ${index === 3 && "text-red-500 font-bold"} ${
+                index === 10 && "text-red-500"
+              }`}
+              href={e.href}
+              onClick={() => setIsMenuOpen(false)}
             >
-              {item}
+              {e.item}
             </Link>
           </NavbarMenuItem>
         ))}
