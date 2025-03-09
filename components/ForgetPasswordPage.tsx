@@ -19,14 +19,11 @@ import { Button, Input, Link } from '@heroui/react';
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 export default function ForgetPasswordPage() {
-    // toggle password visibility
-    const [isVisible, setIsVisible] = useState(false);
-    const toggleVisibility = () => setIsVisible(!isVisible);
 
     return (
-        <div className='flex flex-col md:flex-row min-h-screen p-6 bg-gray-100'>
+        <div className='flex flex-col md:flex-row min-h-screen justify-center items-center p-6 bg-gray-100'>
             <div className='w-full md:w-1/2 flex items-center justify-center p-6'>
-                <main className="w-full max-w-md">
+                <main className="w-full h-full max-w-md">
                     <h1 className="text-3xl font-semibold text-gray-800">
                         Forget Password
                     </h1>
