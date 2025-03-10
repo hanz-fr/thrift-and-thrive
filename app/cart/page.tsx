@@ -33,7 +33,7 @@ export default function CartPage() {
       <h1 className="text-lg sm:text-xl md:text-2xl font-semibold">My Cart</h1>
       <div className="py-6">
         <h5 className="text-sm">Total Product in Cart: {cart.length}</h5>
-        <hr className="h-px my-2 bg-gray-500 border-0" />
+        <hr className="h-px my-2 bg-gray-500 border-0" /> 
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6">
