@@ -124,13 +124,13 @@ export default function ProductDetailPage() {
           </p>
         </div>
 
-        <div className="flex flex-row gap-4 items-center justify-between">
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
           <div className="flex flex-row gap-4">
             <IoPersonCircleSharp size={32} />
             <p className="text-lg font-semibold">Post by {product?.post_by}</p>
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="flex flex-row gap-4 justify-between ">
             <Button
               className="text-sm font-semibold bg-[#16423C] text-white"
               size="md"
