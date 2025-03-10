@@ -42,7 +42,7 @@ export default function OrderList() {
     return (
         <div className="w-full mx-auto px-4 py-6 space-y-4">
             {orders.map((order) => (
-                <Card key={order.id} className="flex flex-col md:flex-row items-center gap-4 p-4 shadow-md border border-gray-200 rounded-lg">
+                <Card key={order.id} className="text-[#16423C] flex flex-col md:flex-row items-center gap-4 p-4 shadow-md border border-gray-200 rounded-lg">
                     <div className="w-full md:w-1/4">
                         <img src={order.productImage} alt={order.productName} className="w-full h-32 md:h-36 object-contain rounded-md" />
                     </div>

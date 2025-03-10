@@ -63,7 +63,7 @@ export default function UploadFashionForm() {
 
     return (
         <>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className=" w-full p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#16423C] w-full p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="w-full">
                     <CardHeader className="flex flex-col gap-4">
                         <label htmlFor="avatar-upload" className="cursor-pointer">

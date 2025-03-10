@@ -15,7 +15,7 @@ export default function DetailBlogPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="text-[#16423C] max-w-4xl mx-auto p-6">
       {/* Judul Blog */}
       <h1 className="text-3xl font-bold mt-4">{blog.title}</h1>
 
