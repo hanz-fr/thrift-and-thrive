@@ -15,7 +15,7 @@ export default function ProductCarousel() {
       className="w-full h-fit"
     >
       <SwiperSlide>
-        <div className="relative w-72 h-72 mx-auto">
+        <div className="relative w-[400px] h-[400px] mx-auto">
           <img
             className="object-fill w-full rounded-lg"
             src="/img/hoodie.jpg"
@@ -24,7 +24,7 @@ export default function ProductCarousel() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="w-72 h-72 mx-auto rounded-lg">
+        <div className="w-[400px] h-[400px] mx-auto rounded-lg">
           <img
             className="object-fill w-full rounded-lg"
             src="/img/hoodie.jpg"
@@ -33,7 +33,7 @@ export default function ProductCarousel() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="w-72 h-72 mx-auto rounded-lg">
+        <div className="w-[400px] h-[400px] mx-auto rounded-lg">
           <img
             className="object-fill w-full rounded-lg"
             src="/img/hoodie.jpg"
