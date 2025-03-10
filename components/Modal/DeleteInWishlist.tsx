@@ -12,21 +12,21 @@ import {
     Button
 } from "@heroui/react";
 
-interface DeleteInWishlistProps {
+interface FormTradeProductModalProps {
     isOpen: boolean;
     onClose: () => void;
     onConfirm: () => void;
     product: any | null;
 }
 
-const DeleteInWishlist: React.FC<DeleteInWishlistProps> = ({ isOpen, onClose, onConfirm, product }) => {
+const FormTradeProductModal: React.FC<FormTradeProductModalProps> = ({ isOpen, onClose, onConfirm, product }) => {
     return (
-        <Modal isOpen={isOpen} onOpenChange={onClose}>
+        <Modal size='lg' isOpen={isOpen} onOpenChange={onClose}>
             <ModalContent>
                 <>
-                    <ModalHeader className="flex flex-col gap-1">Remove from Wishlist</ModalHeader>
+                    <ModalHeader className="flex flex-col gap-1">Trade Product</ModalHeader>
                     <ModalBody>
-                        <p>Are you sure you want to remove this product from your wishlist?</p>
+                        <p>Are you sure you want to trade this product?</p>
                         {product && (
                             <div className="flex items-center gap-4 mt-4">
                                 <img src={`/img/${product.image}`} alt={product.clothes} className="w-16 h-16 object-cover rounded-md" />
@@ -42,7 +42,7 @@ const DeleteInWishlist: React.FC<DeleteInWishlistProps> = ({ isOpen, onClose, on
                             Cancel
                         </Button>
                         <Button className='bg-[#16423C] text-white' onPress={onConfirm}>
-                            Remove
+                            Confirm Trade
                         </Button>
                     </ModalFooter>
                 </>
@@ -51,4 +51,4 @@ const DeleteInWishlist: React.FC<DeleteInWishlistProps> = ({ isOpen, onClose, on
     );
 };
 
-export default DeleteInWishlist;
+export default FormTradeProductModal;
