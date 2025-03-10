@@ -9,7 +9,7 @@ const orders = [
         status: "Selesai",
         price: "Rp 120.000",
         productName: "Kemeja Linen Daur Ulang",
-        productImage: "/images/linen-shirt.jpg",
+        productImage: "/img/clothes2.jpg",
         trackingNumber: "1234567890ABCDEF", // Tambahkan kode resi pengiriman
     },
     {
@@ -18,7 +18,7 @@ const orders = [
         status: "Dikirim",
         price: "Rp 85.000",
         productName: "Kaos Katun Organik",
-        productImage: "/images/organic-cotton.jpg",
+        productImage: "/img/Clothes.jpg",
         trackingNumber: "ABCDEF1234567890", // Tambahkan kode resi pengiriman
     },
     {
@@ -27,13 +27,13 @@ const orders = [
         status: "Diproses",
         price: "Rp 150.000",
         productName: "Jaket Denim Second-Hand",
-        productImage: "/images/denim-jacket.jpg",
+        productImage: "/img/denimjacket.jpg",
         trackingNumber: "0987654321ABCDEF", // Tambahkan kode resi pengiriman
     },
 ];
 
 export default function OrderList() {
-    const handleCopyTrackingNumber = (trackingNumber) => {
+    const handleCopyTrackingNumber = (trackingNumber : any) => {
         navigator.clipboard.writeText(trackingNumber)
             .then(() => alert("Kode resi berhasil disalin!"))
             .catch(() => alert("Gagal menyalin kode resi."));
@@ -44,7 +44,7 @@ export default function OrderList() {
             {orders.map((order) => (
                 <Card key={order.id} className="flex flex-col md:flex-row items-center gap-4 p-4 shadow-md border border-gray-200 rounded-lg">
                     <div className="w-full md:w-1/4">
-                        <img src={order.productImage} alt={order.productName} className="w-full h-32 md:h-24 object-cover rounded-md" />
+                        <img src={order.productImage} alt={order.productName} className="w-full h-32 md:h-36 object-contain rounded-md" />
                     </div>
                     <CardBody className="w-full md:w-3/4 flex flex-col justify-between">
                         <div>
