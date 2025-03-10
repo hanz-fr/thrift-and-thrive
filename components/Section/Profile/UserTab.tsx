@@ -6,7 +6,7 @@ export default function UserTabs() {
             {/* Bagian Profil */}
             <div className='md:col-start-1 md:col-end-4 col-span-full'>
                 <div className='flex items-center flex-col gap-4'>
-                    <div className='h-32 w-32 md:h-52 md:w-52 border rounded-full'></div>
+                    <img src='/img/hoodie.jpg' className='h-32 w-32 md:h-52 md:w-52 border rounded-full'></img>
                     <h1 className='text-xl text-[#16423C] font-semibold text-center'>Hallo Sandy Roadiguez</h1>
                     <p className='text-center'>@sandyroadiguez</p>
                 </div>

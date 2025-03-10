@@ -1,167 +1,82 @@
 [
-    {
+  {
       "id": 1,
       "title": "Masa Depan Fashion Berkelanjutan: Tren & Inovasi",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
+      "sections": [
+          {
+              "image": "/images/blog/images2.jpg",
+              "content": "<p>Industri fashion terus berkembang menuju keberlanjutan dengan material ramah lingkungan dan teknologi produksi yang lebih hijau.</p>"
+          },
+          {
+              "image": "/images/blog/images1.png",
+              "content": "<p>Dengan meningkatnya kesadaran konsumen, brand-brand besar mulai mengadopsi praktik produksi yang lebih ramah lingkungan.</p>"
+          }
       ],
-      "content": "<p>Industri fashion terus berkembang menuju keberlanjutan dengan material ramah lingkungan dan teknologi produksi yang lebih hijau.</p>",
       "author": "John Doe",
       "release_date": "2025-03-08"
-    },
-    {
+  },
+  {
       "id": 2,
       "title": "Teknologi dalam Mode: Dari AI Hingga Pakaian Pintar",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
+      "sections": [
+          {
+              "image": "/images/blog/images1.png",
+              "content": "<p>Pemanfaatan kecerdasan buatan dan tekstil pintar semakin membantu industri fashion dalam mengurangi limbah dan meningkatkan efisiensi.</p>"
+          },
+          {
+              "image": "/images/blog/images2.jpg",
+              "content": "<p>Pakaian pintar yang dilengkapi sensor dan teknologi IoT menjadi tren baru dalam dunia fashion.</p>"
+          }
       ],
-      "content": "<p>Pemanfaatan kecerdasan buatan dan tekstil pintar semakin membantu industri fashion dalam mengurangi limbah dan meningkatkan efisiensi.</p>",
       "author": "Jane Smith",
       "release_date": "2025-03-07"
-    },
-    {
+  },
+  {
       "id": 3,
       "title": "Slow Fashion vs. Fast Fashion: Mana yang Lebih Baik?",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
+      "sections": [
+          {
+              "image": "/images/blog/images2.jpg",
+              "content": "<p>Slow fashion menawarkan solusi terhadap dampak negatif fast fashion dengan mengutamakan kualitas, etika, dan keberlanjutan.</p>"
+          },
+          {
+              "image": "/images/blog/images1.png",
+              "content": "<p>Fast fashion, meskipun terjangkau, sering kali mengorbankan lingkungan dan kesejahteraan pekerja.</p>"
+          }
       ],
-      "content": "<p>Slow fashion menawarkan solusi terhadap dampak negatif fast fashion dengan mengutamakan kualitas, etika, dan keberlanjutan.</p>",
       "author": "Alex Johnson",
       "release_date": "2025-03-06"
-    },
-    {
+  },
+  {
       "id": 4,
       "title": "Material Ramah Lingkungan: Inovasi dalam Bahan Pakaian",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
+      "sections": [
+          {
+              "image": "/images/blog/images1.png",
+              "content": "<p>Dari katun organik hingga serat daur ulang, material baru semakin mendukung peralihan ke industri fashion yang lebih hijau.</p>"
+          },
+          {
+              "image": "/images/blog/images2.jpg",
+              "content": "<p>Material ramah lingkungan tidak hanya baik untuk bumi tetapi juga nyaman digunakan sehari-hari.</p>"
+          }
       ],
-      "content": "<p>Dari katun organik hingga serat daur ulang, material baru semakin mendukung peralihan ke industri fashion yang lebih hijau.</p>",
       "author": "Michael Lee",
       "release_date": "2025-03-05"
-    },
-    {
+  },
+  {
       "id": 5,
       "title": "Bagaimana Daur Ulang Tekstil Bisa Mengurangi Limbah?",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
+      "sections": [
+          {
+              "image": "/images/blog/images2.jpg",
+              "content": "<p>Mendaur ulang pakaian lama menjadi produk baru adalah langkah penting dalam mengurangi limbah tekstil dan mendukung circular economy.</p>"
+          },
+          {
+              "image": "/images/blog/images1.png",
+              "content": "<p>Proses daur ulang tekstil melibatkan pengumpulan, pemilahan, dan transformasi bahan menjadi produk baru.</p>"
+          }
       ],
-      "content": "<p>Mendaur ulang pakaian lama menjadi produk baru adalah langkah penting dalam mengurangi limbah tekstil dan mendukung circular economy.</p>",
       "author": "Sarah Kim",
       "release_date": "2025-03-04"
-    },
-    {
-      "id": 6,
-      "title": "Brand Fashion yang Berkomitmen pada Keberlanjutan",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
-      ],
-      "content": "<p>Banyak brand ternama yang kini mengadopsi prinsip keberlanjutan dalam produksi, distribusi, dan konsumsi produk fashion mereka.</p>",
-      "author": "David Brown",
-      "release_date": "2025-03-03"
-    },
-    {
-      "id": 7,
-      "title": "Mengenal Circular Fashion: Masa Depan Industri Mode",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
-      ],
-      "content": "<p>Circular fashion mendorong sistem mode yang lebih berkelanjutan dengan konsep reuse, recycle, dan repair pakaian.</p>",
-      "author": "Emily White",
-      "release_date": "2025-03-02"
-    },
-    {
-      "id": 8,
-      "title": "Mengapa Ethical Fashion Itu Penting?",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
-      ],
-      "content": "<p>Ethical fashion tidak hanya fokus pada lingkungan tetapi juga kesejahteraan pekerja industri fashion di seluruh dunia.</p>",
-      "author": "Robert Green",
-      "release_date": "2025-03-01"
-    },
-    {
-      "id": 9,
-      "title": "Blockchain dalam Fashion: Transparansi Rantai Pasokan",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
-      ],
-      "content": "<p>Blockchain membantu brand fashion dalam meningkatkan transparansi rantai pasokan dan memastikan produk lebih etis serta berkelanjutan.</p>",
-      "author": "Olivia Martinez",
-      "release_date": "2025-02-29"
-    },
-    {
-      "id": 10,
-      "title": "Pakaian Vegan: Alternatif Fashion Tanpa Eksploitasi Hewan",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
-      ],
-      "content": "<p>Pakaian berbahan dasar tumbuhan dan alternatif sintetis semakin populer sebagai pilihan fashion yang etis dan ramah lingkungan.</p>",
-      "author": "William Johnson",
-      "release_date": "2025-02-28"
-    },
-    {
-      "id": 11,
-      "title": "Mode Digital: Masa Depan Fashion Tanpa Limbah",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
-      ],
-      "content": "<p>Dengan berkembangnya teknologi, pakaian digital menjadi alternatif mode yang ramah lingkungan dan bebas limbah.</p>",
-      "author": "Sophia Brown",
-      "release_date": "2025-02-27"
-    },
-    {
-      "id": 12,
-      "title": "10 Cara Mudah Beralih ke Gaya Hidup Fashion Berkelanjutan",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
-      ],
-      "content": "<p>Mulai dari membeli pakaian secondhand hingga memilih brand yang berkelanjutan, ada banyak cara untuk mendukung fashion ramah lingkungan.</p>",
-      "author": "Daniel Wilson",
-      "release_date": "2025-02-26"
-    },{
-      "id": 10,
-      "title": "Pakaian Vegan: Alternatif Fashion Tanpa Eksploitasi Hewan",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
-      ],
-      "content": "<p>Pakaian berbahan dasar tumbuhan dan alternatif sintetis semakin populer sebagai pilihan fashion yang etis dan ramah lingkungan.</p>",
-      "author": "William Johnson",
-      "release_date": "2025-02-28"
-    },
-    {
-      "id": 11,
-      "title": "Mode Digital: Masa Depan Fashion Tanpa Limbah",
-      "images": [
-        "/images/blog/images2.jpg",
-        "/images/blog/images1.png"
-      ],
-      "content": "<p>Dengan berkembangnya teknologi, pakaian digital menjadi alternatif mode yang ramah lingkungan dan bebas limbah.</p>",
-      "author": "Sophia Brown",
-      "release_date": "2025-02-27"
-    },
-    {
-      "id": 12,
-      "title": "10 Cara Mudah Beralih ke Gaya Hidup Fashion Berkelanjutan",
-      "images": [
-        "/images/blog/images1.png",
-        "/images/blog/images2.jpg"
-      ],
-      "content": "<p>Mulai dari membeli pakaian secondhand hingga memilih brand yang berkelanjutan, ada banyak cara untuk mendukung fashion ramah lingkungan.</p>",
-      "author": "Daniel Wilson",
-      "release_date": "2025-02-26"
-    }
-  ]
-  
+  }
+]
