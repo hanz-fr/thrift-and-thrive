@@ -1,6 +1,7 @@
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 export default function EducateContainer() {
   return (
@@ -108,8 +109,13 @@ export default function EducateContainer() {
             Learn more about the eco-friendly fashion from our latest article,
             blog, videos, and more. Explore the interesting topics such as
             recycle-able fashion, organic clothing, and slow fashion.
+            <br /> <br />
+            You can also trade or repair your old clothes here, go check them
+            out.
           </div>
-          <Button>Learn More</Button>
+          <Link href={'/blog'}>
+            <Button className="w-full">Learn More</Button>
+          </Link>
         </div>
       </div>
     </div>
