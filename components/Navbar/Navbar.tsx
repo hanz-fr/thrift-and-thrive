@@ -181,7 +181,7 @@ export default function Navbar() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="/mycart"
+            href="/cart"
             className="cursor-pointer lg:flex"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -196,9 +196,8 @@ export default function Navbar() {
         {menuItems.map((e, index) => (
           <NavbarMenuItem key={`${e}-${index}`}>
             <Link
-              className={`w-full ${index === 3 && "text-red-500 font-bold"} ${
-                index === 10 && "text-red-500"
-              }`}
+              className={`w-full ${index === 3 && "text-red-500 font-bold"} ${index === 10 && "text-red-500"
+                }`}
               href={e.href}
               onClick={() => setIsMenuOpen(false)}
             >
