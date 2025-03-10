@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
 
 // import component
@@ -46,7 +46,7 @@ const RekomendasiProducts = [
 ];
 
 export default function AllProducts() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 flex gap-8">
