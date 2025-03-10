@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-export default function ProductCarousel() {
+export default function ProductCarousel({ images }: { images: string[] }) {
   return (
     <Swiper
       modules={[Pagination]}
@@ -14,33 +14,17 @@ export default function ProductCarousel() {
       pagination={{ clickable: true }}
       className="w-full h-fit"
     >
-      <SwiperSlide>
-        <div className="relative w-[400px] h-[400px] mx-auto">
-          <img
-            className="object-fill w-full rounded-lg"
-            src="/img/hoodie.jpg"
-            alt="hoodiejpg"
-          />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="w-[400px] h-[400px] mx-auto rounded-lg">
-          <img
-            className="object-fill w-full rounded-lg"
-            src="/img/hoodie.jpg"
-            alt="hoodiejpg"
-          />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="w-[400px] h-[400px] mx-auto rounded-lg">
-          <img
-            className="object-fill w-full rounded-lg"
-            src="/img/hoodie.jpg"
-            alt="hoodiejpg"
-          />
-        </div>
-      </SwiperSlide>
+      {images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <div className="relative w-[330px] h-[330px] mx-auto">
+            <img
+              className="object-fill w-full rounded-lg"
+              src={img}
+              alt={`product-image-${index}`}
+            />
+          </div>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
