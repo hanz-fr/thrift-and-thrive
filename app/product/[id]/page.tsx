@@ -4,6 +4,7 @@ import React from "react";
 import ProductCarousel from "@/components/Section/Product/ProductCarousel";
 import { Button, addToast } from "@heroui/react";
 import { FaRegHeart } from "react-icons/fa";
+import { IoPersonCircleSharp } from "react-icons/io5";
 import DetailProductTabs from "@/components/Tabs/DetailProductTabs";
 import { useParams } from "next/navigation";
 import product_detail from "@/PRODUCTS_DATA.json";
@@ -41,7 +42,7 @@ export default function ProductDetailPage() {
 
       <div className="space-y-5">
         <h1 className="text-2xl font-bold">{product?.clothes}</h1>
-        <p className="text-lg font-semibold">Rp{product?.price}</p>
+        <p className="text-xl font-semibold">Rp{product?.price}</p>
         <p className="text-gray-500">{product?.long_description}</p>
 
         <div>
@@ -78,15 +79,25 @@ export default function ProductDetailPage() {
             <b>Category:</b> {product?.category}
           </p>
           <p>
+            <b>Brand:</b> {product?.brand}
+          </p>
+          <p>
             <b>Origin:</b> {product?.origin}
           </p>
           <p>
             <b>Product Code:</b> {product?.product_code}
           </p>
         </div>
+
+        <div className="flex flex-row gap-4 items-center">
+          <IoPersonCircleSharp size={32} />
+          <p className="text-lg font-semibold">Post by {product?.post_by}</p>
+        </div>
       </div>
 
-      <DetailProductTabs />
+      <DetailProductTabs
+        descriptionContent={product?.description_content || ""} reviewers={product?.reviewers || ""} reviews={product?.reviews || ""}
+      />
     </div>
   );
 }

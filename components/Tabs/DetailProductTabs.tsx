@@ -4,9 +4,10 @@ import React from 'react'
 
 import { Card, CardBody, Tab, Tabs } from '@heroui/react'
 import DescriptionContent from './DescriptionContent'
+import ReviewsContent from './ReviewsContent'
 
 
-export default function DetailProductTabs() {
+export default function DetailProductTabs({ descriptionContent, reviewers, reviews }: { descriptionContent: string, reviewers: string, reviews: string }) {
     return (
         <div className='w-full h-full'>
             <div className="flex flex-col">
@@ -17,16 +18,14 @@ export default function DetailProductTabs() {
                     <Tab key="photos" title="Description">
                         <Card>
                             <CardBody>
-                                <DescriptionContent />
+                                <DescriptionContent descriptionContent={descriptionContent} />
                             </CardBody>
                         </Card>
                     </Tab>
                     <Tab key="music" title="Reviews">
                         <Card>
                             <CardBody>
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur.
+                                <ReviewsContent reviewers={reviewers} reviews={reviews} />
                             </CardBody>
                         </Card>
                     </Tab>
