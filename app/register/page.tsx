@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -10,7 +11,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 // import components from heroui
-import { Button, Input, Link } from '@heroui/react';
+import { Button, Input } from '@heroui/react';
 
 // import icons from react-icons
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
@@ -99,11 +100,10 @@ export default function RegisterPage() {
                         </div>
                         <div>
                             <h6 className='text-sm mb-8'>Already have an account?
-                                <Link className='text-sm ml-1 text-[#6A9C89]' href="#" underline="always">
+                                <Link className='text-sm ml-1 text-[#6A9C89]' href="/login">
                                     Login
                                 </Link>
                             </h6>
-
                         </div>
                         <Button type='submit' className='w-full h-12 px-4 py-2 text-md text-white bg-[#16423C]'>
                             Register

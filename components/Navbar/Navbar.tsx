@@ -17,7 +17,7 @@ import {
 
 // Import ikon dari react-icons
 import { BsCart2, BsHeart } from "react-icons/bs";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineLogout } from "react-icons/ai";
 
 export const ThriftNThriveLogo = (props: { width: string; height: string }) => {
   return (
@@ -117,7 +117,7 @@ export default function Navbar() {
     },
     {
       item: "Logout",
-      href: "#",
+      href: "/login",
     },
   ];
 
@@ -188,6 +188,11 @@ export default function Navbar() {
             <Badge color="danger" content="3">
               <BsCart2 className="text-neutral-800" fontSize={20} />
             </Badge>
+          </Link>
+        </NavbarItem>
+        <NavbarItem className="cursor-pointer hidden lg:flex">
+          <Link href="/login" onClick={() => setIsMenuOpen(false)}>
+            <AiOutlineLogout className="text-red-500" fontSize={22} />
           </Link>
         </NavbarItem>
       </NavbarContent>

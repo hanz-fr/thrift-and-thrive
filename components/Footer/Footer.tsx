@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="max-w-7xl sm:mx-auto overflow-x-hidden flex-col mx-3">
+    <footer className="max-w-7xl sm:mx-auto overflow-x-hidden flex-col mx-3 mt-20">
       <div className="flex justify-center sm:justify-start gap-6 sm:gap-44 text-xs sm:text-[16px]">
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Product</p>
@@ -27,8 +27,6 @@ export default function Footer() {
         <div className="flex flex-col gap-y-5">
           <p className="font-medium text-[22px]">Help</p>
           <Link href="/faq">FAQs</Link>
-          <a>Cancellation policy</a>
-          <a>Track Order</a>
         </div>
       </div>
       <div className="flex justify-between mt-20 md:mt-44 mb-24">

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link';
 
 // import swiper react components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,39 +14,76 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 // import components from heroui
-import { Button, Input, Link } from '@heroui/react';
+import { Button, Input } from '@heroui/react';
 
 // import icons from react-icons
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
-export default function ForgetPasswordPage() {
+export default function LoginPage() {
+
+    // toggle password visibility
+    const [isVisible, setIsVisible] = useState(false);
+    const toggleVisibility = () => setIsVisible(!isVisible);
 
     return (
-        <div className='flex flex-col md:flex-row min-h-screen justify-center items-center p-6 bg-gray-100'>
+        <div className='flex flex-col md:flex-row min-h-screen justify-center items-center p-6 bg-gray-100 my-10'>
             <div className='w-full md:w-1/2 flex items-center justify-center p-6'>
                 <main className="w-full h-full max-w-md">
-                    <h1 className="text-3xl font-semibold text-gray-800">
-                        Forget Password
+                    <h6 className='text-sm font-semibold'>Welcome back to Thrift and Thrive!</h6>
+                    <h1 className="mb-6 text-2xl font-semibold text-gray-800">
+                        Login to your account
                     </h1>
-                    <h6 className='text-sm mb-6  font-semibold'>Enter your email to be sent a password recovery link!</h6>
                     <form>
-                        <div className="mb-4">
-                            <Input
-                                required
-                                label="Email*"
-                                placeholder="Enter your email"
-                                type="email"
-                                className="w-full"
-                            />
+                        <div className='flex flex-col gap-4'>
+                            <div className="mb-4">
+                                <Input
+                                    required
+                                    label="Email*"
+                                    placeholder="Enter your email"
+                                    type="email"
+                                    className="w-full"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <Input
+                                    required
+                                    endContent={
+                                        <button
+                                            aria-label="toggle password visibility"
+                                            className="focus:outline-none"
+                                            type="button"
+                                            onClick={toggleVisibility}
+                                        >
+                                            {isVisible ? (
+                                                <FaEyeSlash className="text-xl text-gray-500" />
+                                            ) : (
+                                                <FaEye className="text-xl text-gray-500" />
+                                            )}
+                                        </button>
+                                    }
+                                    label="Password*"
+                                    placeholder="Enter your password"
+                                    type={isVisible ? "text" : "password"}
+                                    className="w-full"
+                                />
+                            </div>
                         </div>
-                        <div className='mb-10 '>
-                            <Link className='mb-8 text-sm text-[#6A9C89]' href="#" underline="always">
-                                Remember Password?
-                            </Link>
+                        <div>
+                            <h6 className='text-sm mt-8 mb-3'>Forgot Password?
+                                <Link className='text-sm ml-1 text-[#6A9C89]' href="/reset-password">
+                                    Reset Here
+                                </Link>
+                            </h6>
                         </div>
-
-                        <Button type='submit' className='w-full h-12 px-4 py-2 text-sm text-white bg-[#16423C]'>
-                            Submit
+                        <div>
+                            <h6 className='text-sm mb-8'>Don't have an account?
+                                <Link className='text-sm ml-1 text-[#6A9C89]' href="/register">
+                                    Register Here
+                                </Link>
+                            </h6>
+                        </div>
+                        <Button type='submit' className='w-full h-12 px-4 py-2 text-md text-white bg-[#16423C]'>
+                            Login
                         </Button>
                     </form>
                 </main>
