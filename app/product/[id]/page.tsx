@@ -1,23 +1,43 @@
 "use client";
 
 import React from "react";
+import { useParams } from "next/navigation";
+
+// import carousel from other components
 import ProductCarousel from "@/components/Section/Product/ProductCarousel";
+
+// import icons from react-icons
 import { Button, addToast } from "@heroui/react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5";
+
+// import tabs from other components
 import DetailProductTabs from "@/components/Tabs/DetailProductTabs";
-import { useParams } from "next/navigation";
+
+// import product detail data from json file
 import product_detail from "@/PRODUCTS_DATA.json";
 
 export default function ProductDetailPage() {
 
-  // handle add wish
+  // handle add to wishlist
   const handleWishlistClick = () => {
     addToast({
       title: "Added to Wishlist",
       description: "This product has been added to your wishlist!",
       timeout: 3000,
       shouldShowTimeoutProgress: true,
+      color: "success",
+    });
+  };
+
+  // handle add to cart
+  const handleAddToCartClick = () => {
+    addToast({
+      title: "Added to Cart",
+      description: "This product has been added to your cart!",
+      timeout: 3000,
+      shouldShowTimeoutProgress: true,
+      color: "success",
     });
   };
 
@@ -60,7 +80,7 @@ export default function ProductDetailPage() {
           <Button size="sm" color="primary" className="bg-[#16423C]">
             BUY NOW
           </Button>
-          <Button size="sm" color="primary" className="bg-[#16423C]">
+          <Button size="sm" color="primary" className="bg-[#16423C]" onPress={handleAddToCartClick}>
             ADD TO CART
           </Button>
           <Button
