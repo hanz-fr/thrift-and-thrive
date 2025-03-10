@@ -2,7 +2,10 @@
 
 import React from 'react'
 
+// import components from heroui
 import { Card, CardBody, Tab, Tabs } from '@heroui/react'
+
+// import content components
 import DescriptionContent from './DescriptionContent'
 import ReviewsContent from './ReviewsContent'
 

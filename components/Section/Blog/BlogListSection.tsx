@@ -20,7 +20,7 @@ export default function BlogListSection() {
 
                         return (
                             <motion.div
-                                onClick={() => (window.location.href = /blog/${blog.id})} // Navigasi ke halaman detail blog
+                                onClick={() => (window.location.href = `/blog/${blog.id}`)} // Navigasi ke halaman detail blog
                                 key={blog.id}
                                 className="flex flex-col shadow-md rounded-xl overflow-hidden bg-white cursor-pointer"
                                 initial={{ opacity: 0, y: 50 }}
@@ -30,7 +30,7 @@ export default function BlogListSection() {
                                 {/* Thumbnail gambar pertama */}
                                 <div
                                     className="w-full h-52 bg-cover bg-center"
-                                    style={{ backgroundImage: url(${thumbnailImage}) }}
+                                    style={{ backgroundImage: `url(${thumbnailImage})` }}
                                 ></div>
                                 <div className="p-4">
                                     <h4 className="text-lg font-semibold truncate">{blog.title}</h4>
