@@ -1,4 +1,5 @@
 "use client";
+import React, { use } from "react";
 
 import blogs from "@/BLOGS_DATA.json";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,8 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
-export default function DetailBlogPage({ params }: { params: { id: string } }) {
-  const blog = blogs.find((b) => b.id === parseInt(params.id));
+export default function DetailBlogPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = use(params); // Unwrap the promise
+  const id = resolvedParams.id; // Now you can safely access the id
+  const blog = blogs.find((b) => b.id === parseInt(id));
 
   // Jika blog tidak ditemukan
   if (!blog) {
