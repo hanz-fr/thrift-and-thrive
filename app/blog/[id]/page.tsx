@@ -20,7 +20,7 @@ export default function DetailBlogPage({ params }: { params: Promise<{ id: strin
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 mt-10 mb-32">
       {/* Swiper Carousel */}
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
