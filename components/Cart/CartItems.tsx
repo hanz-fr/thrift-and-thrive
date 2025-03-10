@@ -11,10 +11,27 @@ import DeleteInCartModal from "../Modal/DeleteInCartModal";
 
 interface CartItem {
   id: number;
-  image: string;
-  type: string;
   clothes: string;
+  type: string;
   price: number;
+  image: "denimjacket.jpg";
+  images: string[];
+  category: string;
+  brand: string;
+  origin: string;
+  product_code: string;
+  post_by: string;
+  short_description: string;
+  long_description: string;
+  description_content: string;
+  specifications: {
+    Material: string;
+    Color: string;
+    Sizes: string;
+    Design: string;
+  };
+  reviewers: string;
+  reviews: string;
 }
 
 // interface CartItemsProps {
