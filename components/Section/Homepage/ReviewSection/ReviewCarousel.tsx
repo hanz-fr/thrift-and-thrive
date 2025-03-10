@@ -68,7 +68,7 @@ export default function ReviewCarousel() {
                     <div className="relative hidden sm:flex md:w-32 md:h-24">
                       <Image
                         className="rounded-xl profile-box-shadow"
-                        src={e.image}
+                        src={'/img/useravatar.jpg'}
                         alt={"user"}
                         fill
                         style={{ objectFit: "cover" }}

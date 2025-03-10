@@ -1,7 +1,7 @@
 "use client";
 
-import { Card, CardHeader, CardBody, Avatar, Tabs, Tab } from "@heroui/react";
-// import UserTabs from "@/components/Section/Profile/UserTab";
+import { Card, CardBody, Tabs, Tab } from "@heroui/react";
+import UserTabs from "@/components/Section/Profile/UserTab";
 import MyOrdersTab from "@/components/Section/Profile/MyOrdersTab";
 
 export default function CompanyProfile() {
@@ -12,7 +12,7 @@ export default function CompanyProfile() {
           <Tab key="user" title="User Profile" className="text-[#16423C] rounded-lg border-b-2 border-[#6A9C89]">
             <Card className="border-none">
               <CardBody className="w-[78vw] max-w-6xl">
-                {/* <UserTabs/> */}
+                <UserTabs/>
               </CardBody>
             </Card>
           </Tab>

@@ -79,7 +79,7 @@ export default function FAQs() {
 
       {/* Accordion */}
       <div className="mt-8 space-y-4">
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion className="space-y-4">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
               <AccordionItem
