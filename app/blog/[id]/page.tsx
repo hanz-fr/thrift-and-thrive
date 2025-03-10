@@ -1,17 +1,27 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import blogs from "@/BLOGS_DATA.json";
 import Image from "next/image";
 
-export default function DetailBlogPage({ params }: { params: { id: string } }) {
-  // Unwrap the params object using React.use()
-  const unwrappedParams = React.use(params);
+export default function DetailBlogPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const unwrappedParams = React.use(params); // Unwrap params yang merupakan Promise
+
+  // Pastikan unwrappedParams sudah tersedia sebelum mengaksesnya
+  if (!unwrappedParams) return <div>Loading...</div>;
+
   const blog = blogs.find((b) => b.id === parseInt(unwrappedParams.id));
 
-  // Jika blog tidak ditemukan
   if (!blog) {
-    return <div className="text-center text-red-500 font-bold text-xl">Blog tidak ditemukan.</div>;
+    return (
+      <div className="text-center text-red-500 font-bold text-xl">
+        Blog tidak ditemukan.
+      </div>
+    );
   }
 
   return (
@@ -21,7 +31,8 @@ export default function DetailBlogPage({ params }: { params: { id: string } }) {
 
       {/* Informasi Author & Tanggal */}
       <p className="text-gray-500 text-sm mt-2">
-        Ditulis oleh <span className="font-semibold">{blog.author}</span> - {blog.release_date}
+        Ditulis oleh <span className="font-semibold">{blog.author}</span> -{" "}
+        {blog.release_date}
       </p>
 
       {/* Konten Blog */}
@@ -32,7 +43,7 @@ export default function DetailBlogPage({ params }: { params: { id: string } }) {
             <div className="w-full h-[300px] relative mb-4">
               <Image
                 src={section.image}
-                alt={Gambar ${index + 1}}
+                alt={`Gambar ${index + 1}`}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-lg"
@@ -40,7 +51,10 @@ export default function DetailBlogPage({ params }: { params: { id: string } }) {
             </div>
 
             {/* Paragraf */}
-            <div dangerouslySetInnerHTML={{ __html: section.content }} className="text-justify" />
+            <div
+              dangerouslySetInnerHTML={{ __html: section.content }}
+              className="text-justify"
+            />
           </div>
         ))}
       </div>
