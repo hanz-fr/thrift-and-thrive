@@ -1,65 +1,227 @@
 [
     {
         "id": 1,
-        "clothes": "Denim",
+        "clothes": "Denim Jacket",
         "type": "Clothes",
         "price": 4500000,
-        "image": "denimjacket.jpg"
+        "image": "denimjacket.jpg",
+        "images": ["/img/denimjacket.jpg", "/img/denimjacket.jpg", "/img/denimjacket.jpg", "/img/denimjacket.jpg"],
+        "category": "Outerwear",
+        "brand": "Balenciaga",
+        "origin": "Indonesia",
+        "product_code": "DJ-009",
+        "post_by": "Alex Johnson",
+        "short_description": "Stylish and durable denim jacket.",
+        "long_description": "A high-quality denim jacket made from thick and comfortable fabric, perfect for casual and semi-formal styles.",
+        "description_content": "Denim jackets have been a staple in fashion for decades, offering a perfect blend of durability and style. This particular denim jacket is crafted from premium quality fabric, ensuring a comfortable yet rugged look. The dark blue color enhances its versatility, making it suitable for various occasions. Designed for both men and women, it features a classic button-up front, sturdy stitching, and practical pockets. Whether paired with jeans, chinos, or even a dress, this denim jacket adds a timeless charm to any outfit.",
+        "specifications": {
+            "Material": "100% Premium Denim",
+            "Color": "Dark Blue",
+            "Sizes": "S, M, L, XL",
+            "Design": "Unisex",
+            "Care Instructions": "Hand wash only, do not bleach"
+        },
+        "reviewers": "Ecaaa A.",
+        "reviews": "Jaket ini benar-benar stylish dan nyaman dipakai! Bahannya tebal tapi tetap breathable, cocok untuk dipakai di berbagai cuaca. Sangat worth it untuk harga segini!."
     },
     {
         "id": 2,
         "clothes": "T-shirt",
         "type": "Clothes",
         "price": 1500000,
-        "image": "tshirt.jpg"
+        "image": "tshirt.jpg",
+        "images": ["/img/tshirt.jpg", "/img/tshirt.jpg", "/img/tshirt.jpg", "/img/tshirt.jpg"],
+        "category": "Casual Wear",
+        "brand": "Prada",
+        "origin": "Indonesia",
+        "product_code": "TS-102",
+        "post_by": "Michael Smith",
+        "short_description": "Comfortable and breathable cotton T-shirt.",
+        "long_description": "A soft, lightweight T-shirt made from 100% organic cotton, designed for daily wear.",
+        "description_content": "This organic cotton T-shirt is a must-have for any wardrobe. Its soft, breathable fabric ensures all-day comfort, making it ideal for casual wear. The high-quality cotton is eco-friendly and gentle on the skin. Available in classic colors such as white, black, and gray, this T-shirt can be paired effortlessly with jeans, shorts, or layered under a jacket for a stylish look. Its durable stitching and pre-shrunk fabric guarantee long-lasting wear, making it a versatile choice for any occasion.",
+        "specifications": {
+            "Material": "100% Organic Cotton",
+            "Color": "White, Black, Gray",
+            "Sizes": "S, M, L, XL, XXL",
+            "Fit": "Regular",
+            "Care Instructions": "Machine wash cold, tumble dry low"
+        },
+        "reviewers": "Sanchie S.",
+        "reviews": "Kaos ini super nyaman! Bahannya lembut dan adem, cocok banget buat dipakai sehari-hari. Plus, pilihan warnanya simpel tapi tetap elegan."
     },
     {
         "id": 3,
-        "clothes": "Jacket",
+        "clothes": "Leather Jacket",
         "type": "Clothes",
         "price": 3500000,
-        "image": "jacket.jpg"
+        "image": "jacket.jpg",
+        "images": ["/img/jacket.jpg", "/img/jacket.jpg", "/img/jacket.jpg", "/img/jacket.jpg"],
+        "category": "Outerwear",
+        "brand": "Polo Ralph Lauren",
+        "origin": "Italy",
+        "product_code": "LJ-305",
+        "post_by": "Emily Carter",
+        "short_description": "Premium leather jacket for a rugged look.",
+        "long_description": "This classic leather jacket is crafted from top-grain leather with a soft lining, providing warmth and style.",
+        "description_content": "A timeless leather jacket designed for those who appreciate both fashion and function. Crafted from premium top-grain leather, this jacket offers a rugged yet sophisticated appeal. The sleek design, combined with a soft inner lining, ensures both comfort and durability. Featuring a zippered front closure, classic lapel collar, and practical pockets, this jacket adds a bold statement to any outfit. Whether paired with jeans for a casual look or layered over a shirt for a refined appearance, this leather jacket is a must-have for any wardrobe.",
+        "specifications": {
+            "Material": "Top-Grain Leather",
+            "Color": "Black, Brown",
+            "Sizes": "S, M, L, XL",
+            "Design": "Zipper closure, two side pockets",
+            "Care Instructions": "Dry clean only"
+        },
+        "reviewers": "Hanz R.",
+        "reviews": "Salah satu jaket kulit terbaik yang pernah saya beli. Kualitas bahannya premium dan sangat awet. Cocok banget buat tampilan kasual atau semi-formal."
     },
     {
         "id": 4,
         "clothes": "Sweater",
         "type": "Clothes",
         "price": 2200000,
-        "image": "sweater.jpg"
+        "image": "sweater.jpg",
+        "images": ["/img/sweater.jpg", "/img/sweater.jpg", "/img/sweater.jpg", "/img/sweater.jpg"],
+        "category": "Casual Wear",
+        "brand": "Versace",
+        "origin": "Turkey",
+        "product_code": "SW-210",
+        "post_by": "Daniel Anderson",
+        "short_description": "Cozy and warm knitted sweater.",
+        "long_description": "A stylish and comfortable sweater made from premium wool blend, perfect for chilly weather.",
+        "description_content": "Stay warm and stylish with this cozy knitted sweater, made from a high-quality wool blend. Designed for ultimate comfort, it provides insulation while remaining breathable. The classic design features a ribbed crewneck, cuffs, and hem, ensuring a snug fit. Available in timeless colors, this sweater pairs well with jeans, chinos, or layered under a coat for extra warmth. Ideal for chilly weather, this piece adds effortless elegance to your casual and semi-formal looks.",
+        "specifications": {
+            "Material": "Wool Blend",
+            "Color": "Navy, Gray, Beige",
+            "Sizes": "S, M, L, XL",
+            "Fit": "Regular",
+            "Care Instructions": "Hand wash cold, lay flat to dry"
+        },
+        "reviewers": "Kevin F.",
+        "reviews": "Sweater ini sangat nyaman dan hangat! Pas banget buat musim dingin atau cuaca dingin di malam hari. Bahannya juga lembut."
     },
     {
         "id": 5,
         "clothes": "Shorts",
         "type": "Clothes",
         "price": 1200000,
-        "image": "shorts.jpg"
+        "image": "shorts.jpg",
+        "images": ["/img/shorts.jpg", "/img/shorts.jpg", "/img/shorts.jpg", "/img/shorts.jpg"],
+        "category": "Casual Wear",
+        "brand": "Versace",
+        "origin": "Vietnam",
+        "product_code": "SH-512",
+        "post_by": "Sophia Williams",
+        "short_description": "Lightweight and breathable shorts.",
+        "long_description": "Perfect for summer, these shorts are made from a quick-dry fabric that keeps you cool and comfortable.",
+        "description_content": "These lightweight and breathable shorts are designed for everyday comfort. Crafted from a premium polyester-cotton blend, they offer flexibility and durability while keeping you cool. Featuring an elastic waistband with an adjustable drawstring, these shorts provide a perfect fit. Whether worn for casual outings, workouts, or vacations, their stylish yet practical design ensures versatility. The quick-dry fabric makes them ideal for warm weather, keeping you comfortable throughout the day.",
+        "specifications": {
+            "Material": "Polyester-Cotton Blend",
+            "Color": "Khaki, Black, Blue",
+            "Sizes": "S, M, L, XL",
+            "Fit": "Regular",
+            "Care Instructions": "Machine wash warm, tumble dry low"
+        },
+        "reviewers": "Kevin T",
+        "reviews": "Celana pendek ini sangat nyaman! Bahannya ringan, breathable, dan pas banget buat dipakai saat cuaca panas. Desainnya juga stylish."
     },
     {
         "id": 6,
         "clothes": "Blouse",
         "type": "Clothes",
         "price": 1800000,
-        "image": "blouse.jpg"
+        "image": "blouse.jpg",
+        "images": ["/img/blouse.jpg", "/img/blouse.jpg", "/img/blouse.jpg", "/img/blouse.jpg"],
+        "category": "Formal Wear",
+        "brand": "Prada",
+        "origin": "France",
+        "product_code": "BL-003",
+        "post_by": "Christopher Brown",
+        "short_description": "Elegant silk blouse for formal occasions.",
+        "long_description": "A luxurious silk blouse with a tailored fit, perfect for office wear or evening outings.",
+        "description_content": "An elegant silk blouse that exudes sophistication and charm. Made from 100% pure silk, this blouse offers a luxurious feel with a soft and smooth texture. The tailored fit enhances your silhouette, while the delicate button-up design adds a refined touch. Whether paired with formal trousers for office wear or tucked into a skirt for an evening look, this blouse is a versatile choice. The breathable fabric ensures comfort, making it an excellent addition to any wardrobe.",
+        "specifications": {
+            "Material": "100% Silk",
+            "Color": "White, Pink, Blue",
+            "Sizes": "S, M, L",
+            "Fit": "Slim",
+            "Care Instructions": "Dry clean only"
+        },
+        "reviewers": "Ryuu S.",
+        "reviews": "Blouse ini elegan banget! Bahannya halus dan jatuh dengan bagus. Cocok untuk acara formal atau kantor."
     },
     {
         "id": 7,
         "clothes": "Skirt",
         "type": "Clothes",
         "price": 2500000,
-        "image": "skirt.jpg"
+        "image": "skirt.jpg",
+        "images": ["/img/skirt.jpg", "/img/skirt.jpg", "/img/skirt.jpg", "/img/skirt.jpg"],
+        "category": "Formal Wear",
+        "brand": "H&M",
+        "origin": "UK",
+        "product_code": "SK-456",
+        "post_by": "Olivia Davis",
+        "short_description": "Chic and comfortable midi skirt.",
+        "long_description": "A trendy midi skirt made from soft and breathable fabric, suitable for casual and semi-formal occasions.",
+        "description_content": "A chic and comfortable midi skirt designed to complement various outfits. Made from a high-quality rayon blend, this skirt offers a soft and breathable feel. The flared silhouette provides a graceful movement, making it suitable for casual outings or semi-formal events. Featuring a comfortable waistband and a flowy design, it pairs effortlessly with blouses, sweaters, or fitted tops. Its versatile style allows you to dress it up or down, making it an essential piece for any fashion-forward wardrobe.",
+        "specifications": {
+            "Material": "Rayon Blend",
+            "Color": "Black, Red, Green",
+            "Sizes": "S, M, L, XL",
+            "Fit": "Flared",
+            "Care Instructions": "Machine wash cold, iron on low heat"
+        },
+        "reviewers": "Clara K.",
+        "reviews": "Rok ini sangat nyaman dan stylish! Bahannya lembut dan ringan, cocok untuk acara semi-formal maupun santai. Desainnya elegan dan mudah dipadukan dengan berbagai atasan."
     },
     {
         "id": 8,
         "clothes": "Jumpsuit",
         "type": "Clothes",
         "price": 4000000,
-        "image": "jumpsuit.jpg"
+        "image": "jumpsuit.jpg",
+        "images": ["/img/jumpsuit.jpg", "/img/jumpsuit.jpg", "/img/jumpsuit.jpg", "/img/jumpsuit.jpg"],
+        "category": "Casual Wear",
+        "brand": "GAP",
+        "origin": "USA",
+        "product_code": "JP-808",
+        "post_by": "Benjamin Wilson",
+        "short_description": "Trendy one-piece jumpsuit.",
+        "long_description": "This jumpsuit is designed for both comfort and style, featuring a flattering silhouette and breathable fabric.",
+        "description_content": "A trendy one-piece jumpsuit that combines style and comfort effortlessly. Made from a soft and breathable cotton-poly blend, it features a relaxed fit that flatters all body types. The sleek silhouette, along with a cinched waist and functional pockets, enhances both elegance and practicality. Ideal for casual gatherings, travel, or daily wear, this jumpsuit provides an effortless yet fashionable look. Pair it with sneakers for a relaxed vibe or heels for a more polished ensemble.",
+        "specifications": {
+            "Material": "Cotton-Poly Blend",
+            "Color": "Olive, Beige, Black",
+            "Sizes": "S, M, L, XL",
+            "Fit": "Relaxed",
+            "Care Instructions": "Machine wash cold, tumble dry low"
+        },
+        "reviewers": "Danilla R.",
+        "reviews": "Nyaman dan terlihat stylish. Saya suka modelnya yang simpel tapi elegan. Sayangnya, ukurannya sedikit lebih besar dari yang saya harapkan, tapi tetap oke!"
     },
     {
         "id": 9,
         "clothes": "Hoodie",
         "type": "Clothes",
         "price": 1700000,
-        "image": "hoodie.jpg"
+        "image": "hoodie.jpg",
+        "images": ["/img/hoodie.jpg", "/img/hoodie.jpg", "/img/hoodie.jpg", "/img/hoodie.jpg"],
+        "category": "Casual Wear",
+        "brand": "Dior",
+        "origin": "Canada",
+        "product_code": "HD-777",
+        "post_by": "Isabella Martinez",
+        "short_description": "Soft and comfortable hoodie.",
+        "long_description": "A cozy hoodie made from high-quality fleece, designed for everyday wear and maximum comfort.",
+        "description_content": "A must-have hoodie designed for both style and comfort. Made from high-quality fleece, it provides exceptional warmth and softness. The relaxed fit, combined with an adjustable hood and spacious front pocket, makes it a practical choice for everyday wear. Perfect for lounging, outdoor activities, or layering in colder weather, this hoodie is a staple piece in any casual wardrobe. Its durable stitching and breathable fabric ensure long-lasting comfort, making it a go-to option for all seasons.",
+        "specifications": {
+            "Material": "Fleece",
+            "Color": "Gray, Black, Blue",
+            "Sizes": "S, M, L, XL, XXL",
+            "Fit": "Loose",
+            "Care Instructions": "Machine wash warm, tumble dry low"
+        },
+        "reviewers": "Shinichi K.",
+        "reviews": "Hoodie ini luar biasa! Bahannya super lembut dan memberikan kehangatan yang pas. Cocok untuk digunakan di musim dingin atau sekadar bersantai. Worth it!"
     }
 ]

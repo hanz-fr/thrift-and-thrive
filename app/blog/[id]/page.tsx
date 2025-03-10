@@ -32,7 +32,7 @@ export default function DetailBlogPage({ params }: { params: { id: string } }) {
             <div className="w-full h-[300px] relative mb-4">
               <Image
                 src={section.image}
-                alt={`Gambar ${index + 1}`}
+                alt={Gambar ${index + 1}}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-lg"

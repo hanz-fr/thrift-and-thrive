@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
 
 // import component
 import { Card, CardHeader, CardBody, Button } from "@heroui/react";
 
 // import data
-import products from '@/PRODUCTS_DATA.json';
+import products from "@/PRODUCTS_DATA.json";
+import Link from "next/link";
 
 const categories = [
   "Clothes",
@@ -18,14 +19,34 @@ const categories = [
 ];
 
 const RekomendasiProducts = [
-  { id: 1, name: "Vintage Denim Jacket", price: "Rp 250.000", image: "/img/clothes2.jpg" },
-  { id: 2, name: "Cotton Oversized T-Shirt", price: "Rp 150.000", image: "/img/clothes4.jpg" },
-  { id: 3, name: "Retro Sneakers", price: "Rp 300.000", image: "/img/clothes3.jpg" },
-  { id: 6, name: "Graphic Print Hoodie", price: "Rp 220.000", image: "/img/clothes5.jpg" }
+  {
+    id: 1,
+    name: "Vintage Denim Jacket",
+    price: "Rp 250.000",
+    image: "/img/clothes2.jpg",
+  },
+  {
+    id: 2,
+    name: "Cotton Oversized T-Shirt",
+    price: "Rp 150.000",
+    image: "/img/clothes4.jpg",
+  },
+  {
+    id: 3,
+    name: "Retro Sneakers",
+    price: "Rp 300.000",
+    image: "/img/clothes3.jpg",
+  },
+  {
+    id: 6,
+    name: "Graphic Print Hoodie",
+    price: "Rp 220.000",
+    image: "/img/clothes5.jpg",
+  },
 ];
 
 export default function AllProducts() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 flex gap-8">
@@ -47,8 +68,12 @@ export default function AllProducts() {
               >
                 <Button
                   variant="ghost"
-                  className={`w-full text-left py-2 ${selectedCategory === category ? "bg-gray-200" : "hover:bg-gray-100"}`}
-                  onClick={() => setSelectedCategory(category)}
+                  className={`w-full text-left py-2 ${
+                    selectedCategory === category
+                      ? "bg-gray-200"
+                      : "hover:bg-gray-100"
+                  }`}
+                  onPress={() => setSelectedCategory(category)}
                 >
                   {category}
                 </Button>
@@ -70,7 +95,11 @@ export default function AllProducts() {
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Card key={x.id}>
                   <CardBody className="flex flex-row shadow-sm items-center gap-4 p-2">
-                    <img src={x.image} alt={x.name} className="w-16 h-16 rounded-lg" />
+                    <img
+                      src={x.image}
+                      alt={x.name}
+                      className="w-16 h-16 rounded-lg"
+                    />
                     <div className="flex flex-col">
                       <h4 className="font-semibold">{x.name}</h4>
                       <p>{x.price}</p>
@@ -88,29 +117,33 @@ export default function AllProducts() {
         <h2 className="text-2xl font-bold mb-4">All Products</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <motion.a
-              key={index}
-              href={`/product/${product.id}`}
-              whileHover={{ scale: 1.05, boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)" }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
-              <Card key={index} className="shadow-md">
-                <CardHeader>
-                  <motion.img
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="w-full h-44 rounded-md object-cover"
-                    src={`/img/${product.image}`}
-                    alt=""
-                  />
-                </CardHeader>
-                <CardBody>
-                  <h4 className="font-semibold">{product.clothes}</h4>
-                  <p className="text-gray-600">{product.price}</p>
-                </CardBody>
-              </Card>
-            </motion.a>
+            <Link href={`/product/${product.id}`} key={index}>
+              <motion.div
+                key={index}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <Card key={index} className="shadow-md">
+                  <CardHeader>
+                    <motion.img
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="w-full h-44 rounded-md object-cover"
+                      src={`/img/${product.image}`}
+                      alt=""
+                    />
+                  </CardHeader>
+                  <CardBody>
+                    <h4 className="font-semibold">{product.clothes}</h4>
+                    <p className="text-gray-600">{product.price}</p>
+                  </CardBody>
+                </Card>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </main>

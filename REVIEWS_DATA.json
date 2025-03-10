@@ -22,5 +22,11 @@
     "image": "https://placehold.co/300x300/white/black",
     "review": "murah tapi berkualitas, mantap",
     "rating": 4
+  },
+  {
+    "username": "Ikshan",
+    "image": "https://placehold.co/300x300/white/black",
+    "review": "Pengiriman agak lambat",
+    "rating": 3
   }
 ]

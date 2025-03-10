@@ -13,7 +13,7 @@ export default function SearchBar() {
             <MdOutlineCameraAlt className="text-2xl pointer-events-none" />
           </button>
         }
-        className="sm:w-1/2"
+        className="sm:w-full lg:w-2/3"
       />
     </div>
   );

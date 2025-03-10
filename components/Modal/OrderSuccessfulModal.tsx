@@ -1,6 +1,10 @@
 // OrderSuccessfulModal.tsx
 import React from 'react';
+
+// import componenst from heroui
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from '@heroui/react';
+
+// import icons from react-icons
 import { AiFillCheckCircle } from 'react-icons/ai';
 
 interface OrderSuccessfulModalProps {

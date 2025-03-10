@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardHeader, CardBody, Avatar, Tabs, Tab } from "@heroui/react";
+import { Card, CardBody, Tabs, Tab } from "@heroui/react";
 import UserTabs from "@/components/Section/Profile/UserTab";
 import MyOrdersTab from "@/components/Section/Profile/MyOrdersTab";
 import UploadFashionForm from "@/components/Section/Profile/UploadFashionForm";
