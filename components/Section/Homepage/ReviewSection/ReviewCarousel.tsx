@@ -64,18 +64,18 @@ export default function ReviewCarousel() {
             <SwiperSlide className="p-2 justify-center">
               <Card shadow="none" className="bg-[#D9D9D9] h-full">
                 <CardBody>
-                  <div className="flex gap-5 my-auto items-center mx-auto">
-                    <div className="w-fit h-fit">
+                  <div className="flex gap-5 my-auto items-center mx-auto p-3">
+                    <div className="relative hidden sm:flex md:w-32 md:h-24">
                       <Image
                         className="rounded-xl profile-box-shadow"
                         src={e.image}
                         alt={"user"}
-                        width={100}
-                        height={100}
+                        fill
+                        style={{ objectFit: "cover" }}
                         unoptimized
                       />
                     </div>
-                    <span className="flex flex-col w-64 gap-1">
+                    <span className="flex flex-col w-full gap-2 pl-5 sm:pr-5 sm:pl-0">
                       <p className="font-normal text-sm sm:text-[14px]">
                         "{e.review}"
                       </p>
