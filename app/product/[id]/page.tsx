@@ -1,23 +1,38 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "next/navigation";
 
 // import carousel from other components
 import ProductCarousel from "@/components/Section/Product/ProductCarousel";
 
 // import icons from react-icons
-import { Button, addToast } from "@heroui/react";
+import { Button, addToast, useDisclosure } from "@heroui/react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoPersonCircleSharp } from "react-icons/io5";
+import { GiWaterRecycling } from "react-icons/gi";
 
 // import tabs from other components
 import DetailProductTabs from "@/components/Tabs/DetailProductTabs";
+
+// import modal from other components
+import FormTradeProductModal from "@/components/Modal/FormTradeProductModal";
 
 // import product detail data from json file
 import product_detail from "@/PRODUCTS_DATA.json";
 
 export default function ProductDetailPage() {
+
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleTradeNowClick = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      onOpen();
+    }, 2000);
+  };
 
   // handle add to wishlist
   const handleWishlistClick = () => {
@@ -109,15 +124,31 @@ export default function ProductDetailPage() {
           </p>
         </div>
 
-        <div className="flex flex-row gap-4 items-center">
-          <IoPersonCircleSharp size={32} />
-          <p className="text-lg font-semibold">Post by {product?.post_by}</p>
+        <div className="flex flex-row gap-4 items-center justify-between">
+          <div className="flex flex-row gap-4">
+            <IoPersonCircleSharp size={32} />
+            <p className="text-lg font-semibold">Post by {product?.post_by}</p>
+          </div>
+
+          <div className="flex gap-4 items-center">
+            <Button
+              className="text-sm font-semibold bg-[#16423C] text-white"
+              size="md"
+              endContent={<GiWaterRecycling size={24} />}
+              onPress={handleTradeNowClick}
+              isLoading={isLoading}
+            >
+              {isLoading ? "Loading..." : "Trade Now"}
+            </Button>
+          </div>
         </div>
       </div>
 
       <DetailProductTabs
         descriptionContent={product?.description_content || ""} reviewers={product?.reviewers || ""} reviews={product?.reviews || ""}
       />
+
+      <FormTradeProductModal isOpen={isOpen} onOpenChange={onOpenChange} product={product} />
     </div>
   );
 }
