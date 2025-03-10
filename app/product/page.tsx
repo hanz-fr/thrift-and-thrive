@@ -73,7 +73,7 @@ export default function AllProducts() {
                       ? "bg-gray-200"
                       : "hover:bg-gray-100"
                   }`}
-                  onClick={() => setSelectedCategory(category)}
+                  onPress={() => setSelectedCategory(category)}
                 >
                   {category}
                 </Button>
@@ -118,7 +118,7 @@ export default function AllProducts() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
             <Link href={`/product/${product.id}`} key={index}>
-              <motion.a
+              <motion.div
                 key={index}
                 whileHover={{
                   scale: 1.05,
@@ -142,7 +142,7 @@ export default function AllProducts() {
                     <p className="text-gray-600">{product.price}</p>
                   </CardBody>
                 </Card>
-              </motion.a>
+              </motion.div>
             </Link>
           ))}
         </div>
