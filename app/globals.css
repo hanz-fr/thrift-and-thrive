@@ -41,12 +41,12 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: gray !important; /* Warna abu */
+  color: gray !important; 
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: black !important; /* Warna hitam saat hover */
+  color: black !important; 
 }
 
 .loader {
