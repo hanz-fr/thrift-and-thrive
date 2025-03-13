@@ -66,17 +66,16 @@ export default function AllProducts() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-                <Button
+                {/* <Button
                   variant="ghost"
-                  className={`w-full text-left py-2 ${
-                    selectedCategory === category
+                  className={`w-full text-left py-2 ${selectedCategory === category
                       ? "bg-gray-200"
                       : "hover:bg-gray-100"
-                  }`}
-                  onClick={() => setSelectedCategory(category)}
+                    }`}
+                  onPress={() => setSelectedCategory(category)}
                 >
                   {category}
-                </Button>
+                </Button> */}
               </motion.li>
             ))}
           </ul>
