@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Button, Input } from "@heroui/react";
+import { Input } from "@heroui/react";
 import { FaCcVisa, FaCcMastercard, FaCcPaypal, FaUniversity } from 'react-icons/fa';
 
 interface CheckoutFormProps {

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // import components from heroui
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Spinner } from "@heroui/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@heroui/react";
 
 // import icons from react-icons
 import { AiFillCloseCircle } from "react-icons/ai";

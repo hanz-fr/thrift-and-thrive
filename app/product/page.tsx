@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
 
 // import component
@@ -46,10 +46,10 @@ const RekomendasiProducts = [
 ];
 
 export default function AllProducts() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
 
   return (
-    <div className="px-6 py-12 flex gap-8">
+    <div className="max-w-7xl mx-auto px-6 py-12 flex gap-8">
       {/* Filter Section */}
       <aside className="w-1/4 hidden md:block">
         <motion.div
@@ -66,16 +66,16 @@ export default function AllProducts() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 200 }}
               >
-                {/* <Button
+                <Button
                   variant="ghost"
                   className={`w-full text-left py-2 ${selectedCategory === category
-                      ? "bg-gray-200"
-                      : "hover:bg-gray-100"
+                    ? "bg-gray-200"
+                    : "hover:bg-gray-100"
                     }`}
                   onPress={() => setSelectedCategory(category)}
                 >
                   {category}
-                </Button> */}
+                </Button>
               </motion.li>
             ))}
           </ul>
@@ -117,7 +117,7 @@ export default function AllProducts() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
             <Link href={`/product/${product.id}`} key={index}>
-              <motion.a
+              <motion.div
                 key={index}
                 whileHover={{
                   scale: 1.05,
@@ -141,7 +141,7 @@ export default function AllProducts() {
                     <p className="text-gray-600">{product.price}</p>
                   </CardBody>
                 </Card>
-              </motion.a>
+              </motion.div>
             </Link>
           ))}
         </div>

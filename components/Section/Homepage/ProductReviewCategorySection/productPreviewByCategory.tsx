@@ -59,8 +59,8 @@ export default function ProductPreviewByCategory() {
         {/* Accordion List */}
         <div className="order-2 md:order-1 lg:col-span-3 flex flex-col gap-3">
           <Accordion variant="light" className="flex flex-col">
-            {selectedCategoryData?.items?.length > 0 ? (
-              selectedCategoryData.items.map((res, index) => (
+            {selectedCategoryData!.items.length > 0 ? (
+              selectedCategoryData!.items.map((res, index) => (
                 <AccordionItem
                   className="opacity-100 animate-fadeIn"
                   hideIndicator

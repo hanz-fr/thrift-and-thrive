@@ -7,7 +7,7 @@ import BlogListSection from '@/components/Section/Blog/BlogListSection'
 
 export default function Blogpage() {
   return (
-    <div>
+    <div className='max-w-7xl mx-auto py-8'>
         <BlogHeroSection/>
         <BlogFilterSection/>
         <BlogListSection/>

@@ -2,9 +2,6 @@
 
 import React, { useRef } from "react";
 
-// import component from heroui
-import { Button } from "@heroui/react";
-
 // import icons from react-icons
 import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
 

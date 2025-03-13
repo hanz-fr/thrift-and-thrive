@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link';
 
 // import swiper react components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,7 +14,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 // import components from heroui
-import { Button, Input, Link } from '@heroui/react';
+import { Button, Input } from '@heroui/react';
 
 // import icons from react-icons
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
@@ -39,7 +40,7 @@ export default function ForgetPasswordPage() {
                             />
                         </div>
                         <div className='mb-10 '>
-                            <Link className='mb-8 text-sm text-[#6A9C89]' href="#" underline="always">
+                            <Link className='text-sm text-[#6A9C89]' href="/login">
                                 Remember Password?
                             </Link>
                         </div>

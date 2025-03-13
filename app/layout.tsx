@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -36,12 +35,12 @@ export default function RootLayout({
         <Providers>
           <div>
             {/* navbar */}
-            {/* <Navbar /> */}
+            <Navbar />
 
             {children}
 
             {/* footer */}
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </Providers>
         <script

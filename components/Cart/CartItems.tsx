@@ -10,91 +10,112 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import DeleteInCartModal from "../Modal/DeleteInCartModal";
 
 interface CartItem {
-    id: number;
-    image: string;
-    type: string;
-    clothes: string;
-    price: number;
+  id: number;
+  clothes: string;
+  type: string;
+  price: number;
+  image: "denimjacket.jpg";
+  images: string[];
+  category: string;
+  brand: string;
+  origin: string;
+  product_code: string;
+  post_by: string;
+  short_description: string;
+  long_description: string;
+  description_content: string;
+  specifications: {
+    Material: string;
+    Color: string;
+    Sizes: string;
+    Design: string;
+  };
+  reviewers: string;
+  reviews: string;
 }
 
-interface CartItemsProps {
-    cart: CartItem[];
-    setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
-}
+// interface CartItemsProps {
+//   cart: CartItem[];
+//   setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
+// }
 
-export default function CartItems({ cart, setCart }: CartItemsProps) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedProduct, setSelectedProduct] = useState<CartItem | null>(null);
+export default function CartItems({ cart, setCart }: any) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<CartItem | null>(null);
 
-    const handleDeleteClick = (product: CartItem) => {
-        setSelectedProduct(product);
-        setIsModalOpen(true);
-    };
+  const handleDeleteClick = (product: CartItem) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
 
-    const handleConfirmDelete = () => {
-        if (selectedProduct !== null) {
-            setCart(cart.filter((product) => product.id !== selectedProduct.id));
-        }
-        setIsModalOpen(false);
-    };
+  const handleConfirmDelete = () => {
+    if (selectedProduct !== null) {
+      setCart(
+        cart.filter(
+          (product: { id: number }) => product.id !== selectedProduct.id
+        )
+      );
+    }
+    setIsModalOpen(false);
+  };
 
-    return (
-        <>
-            <div className="flex flex-col gap-4 flex-1">
-                {cart.length > 0 ? (
-                    cart.map((product) => (
-                        <div
-                            key={product.id}
-                            className="flex flex-wrap items-center p-4 bg-gray-200 rounded-lg shadow-md gap-4 sm:gap-6"
-                        >
-                            <div className="w-20 h-20 bg-gray-400 rounded overflow-hidden">
-                                <img
-                                    src={`/img/${product.image}`}
-                                    alt={product.clothes}
-                                    className="h-full w-full object-cover"
-                                />
-                            </div>
-
-                            <div className="flex-1 flex flex-col gap-2 min-w-[150px]">
-                                <h3 className="text-sm font-semibold">{product.clothes}</h3>
-                                <p className="text-xs text-gray-500">Stock</p>
-                                <p className="text-sm font-semibold">
-                                    Rp. {product.price.toLocaleString()}
-                                </p>
-                            </div>
-
-                            <div className="flex items-center gap-4">
-                                <button
-                                    onClick={() => handleDeleteClick(product)}
-                                    className="text-gray-600 hover:text-red-600"
-                                >
-                                    <BsTrash size={14} />
-                                </button>
-                                <div className="flex items-center gap-2 border p-1 rounded-lg">
-                                    <button className="p-1 hover:bg-gray-300 rounded-md">
-                                        <FiMinus size={14} />
-                                    </button>
-                                    <span className="text-sm w-6 text-center">1</span>
-                                    <button className="p-1 hover:bg-gray-300 rounded-md">
-                                        <FiPlus size={14} />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                ) : (
-                    <p className="text-center text-gray-500">Your cart is empty.</p>
-                )}
-            </div>
-
-            {isModalOpen && (
-                <DeleteInCartModal
-                    isOpen={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
-                    onConfirm={handleConfirmDelete}
-                    product={selectedProduct}
+  return (
+    <>
+      <div className="flex flex-col gap-4 flex-1">
+        {cart.length > 0 ? (
+          cart.map((product: CartItem) => (
+            <div
+              key={product.id}
+              className="flex flex-wrap items-center p-4 bg-gray-200 rounded-lg shadow-md gap-4 sm:gap-6"
+            >
+              <div className="w-20 h-20 bg-gray-400 rounded overflow-hidden">
+                <img
+                  src={`/img/${product.image}`}
+                  alt={product.clothes}
+                  className="h-full w-full object-cover"
                 />
-            )}
-        </>
-    );
+              </div>
+
+              <div className="flex-1 flex flex-col gap-2 min-w-[150px]">
+                <h3 className="text-sm font-semibold">{product.clothes}</h3>
+                <p className="text-xs text-gray-500">Stock</p>
+                <p className="text-sm font-semibold">
+                  Rp. {product.price.toLocaleString()}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => handleDeleteClick(product)}
+                  className="text-gray-600 hover:text-red-600"
+                >
+                  <BsTrash size={14} />
+                </button>
+                <div className="flex items-center gap-2 border p-1 rounded-lg">
+                  <button className="p-1 hover:bg-gray-300 rounded-md">
+                    <FiMinus size={14} />
+                  </button>
+                  <span className="text-sm w-6 text-center">1</span>
+                  <button className="p-1 hover:bg-gray-300 rounded-md">
+                    <FiPlus size={14} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p className="text-center text-gray-500">Your cart is empty.</p>
+        )}
+      </div>
+
+      {isModalOpen && (
+        <DeleteInCartModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onConfirm={handleConfirmDelete}
+          product={selectedProduct}
+        />
+      )}
+    </>
+  );
 }
